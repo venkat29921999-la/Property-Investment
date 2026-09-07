@@ -1,0 +1,551 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Stackly Property Investment — Real assets, precisely placed</title>
+<meta name="description" content="Stackly identifies, acquires and manages real-estate investments across residential, commercial and land assets for private and institutional investors.">
+
+<!-- Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+<!-- Font Awesome (icons only, per brief) -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+<!-- AOS (scroll reveal) -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ============ CUSTOM CURSOR (desktop) ============ -->
+<div class="cursor-dot" aria-hidden="true"></div>
+<div class="cursor-ring" aria-hidden="true"></div>
+
+<!-- ============ PRELOADER ============ -->
+<div class="preloader" id="preloader" aria-hidden="true">
+  <svg class="preloader-mark" viewBox="0 0 60 60" fill="none">
+    <circle cx="30" cy="30" r="26" stroke="currentColor" stroke-width="1.2"/>
+    <path class="preloader-line" d="M8 30 A22 22 0 0 1 52 30" stroke="currentColor" stroke-width="1.2"/>
+  </svg>
+</div>
+
+<!-- ============ HEADER ============ -->
+<header class="site-header" id="siteHeader">
+  <div class="header-inner">
+
+    <a href="index.html" class="brand" aria-label="Stackly — home">
+      <span class="brand-mark-img" role="img" aria-label="Stackly logo"></span>
+    </a>
+
+    <nav class="nav-group nav-main" aria-label="Primary">
+      <a href="index.html" class="nav-link is-active">Home</a>
+      <a href="about.html" class="nav-link">About</a>
+      <a href="services.html" class="nav-link">Services</a>
+      <a href="blog.html" class="nav-link">Blog</a>
+      <a href="contact.html" class="nav-link">Contact</a>
+    </nav>
+
+    <a href="login.html" class="btn-login"><i class="fa-solid fa-user"></i><span>Log in</span></a>
+
+    <button class="hamburger" id="hamburgerBtn" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<!-- ============ MOBILE MENU ============ -->
+<div class="mobile-menu" id="mobileMenu">
+  <nav aria-label="Mobile primary">
+    <a href="index.html" class="mobile-link"><span>01</span>Home</a>
+    <a href="about.html" class="mobile-link"><span>02</span>About</a>
+    <a href="services.html" class="mobile-link"><span>03</span>Services</a>
+    <a href="blog.html" class="mobile-link"><span>04</span>Blog</a>
+    <a href="contact.html" class="mobile-link"><span>05</span>Contact</a>
+  </nav>
+  <a href="login.html" class="btn-outline mobile-login"><i class="fa-solid fa-user"></i> Log in</a>
+  <div class="mobile-menu-foot">
+    <div class="mobile-socials">
+      <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+      <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+      <a href="#" aria-label="X"><i class="fa-brands fa-x-twitter"></i></a>
+    </div>
+    <p>+1 (415) 555‑0148</p>
+  </div>
+</div>
+<div class="mobile-menu-backdrop" id="mobileBackdrop"></div>
+
+<main id="home">
+
+  <!-- ============ 1. HERO ============ -->
+  <section class="hero" id="hero">
+    <div class="hero-media">
+      <img class="hero-photo" src="assets/pv1.webp" alt="Contemporary villa with a private pool, one of Stackly's residential-portfolio assets" loading="eager">
+      <div class="hero-scrim"></div>
+      <svg class="hero-blueprint" id="heroBlueprint" viewBox="0 0 800 500" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+        <g fill="none" stroke="currentColor" stroke-width="1">
+          <path class="bp-path" d="M40 460 L40 260 L120 260 L120 180 L210 180 L210 260 L300 260 L300 120 L400 60 L500 120 L500 260 L600 260 L600 200 L700 200 L700 460 Z"/>
+          <path class="bp-path bp-path--2" d="M120 260 L120 460 M210 260 L210 460 M300 260 L300 460 M500 260 L500 460 M600 260 L600 460"/>
+          <path class="bp-path bp-path--3" d="M400 60 L400 460"/>
+        </g>
+      </svg>
+    </div>
+
+    <div class="hero-content">
+      <p class="hero-kicker">Property investment &amp; asset management</p>
+      <h1 class="hero-title">We find the square footage <br class="lg-only"> the market hasn't priced in yet.</h1>
+      <p class="hero-sub">Stackly sources, underwrites and manages real-estate investments across twelve metro markets — turning overlooked buildings into disciplined, income‑producing assets for our partners.</p>
+      <div class="hero-actions">
+        <a href="404.html" class="btn-solid">Start an allocation<i class="fa-solid fa-arrow-right-long"></i></a>
+        <a href="404.html" class="btn-ghost"><i class="fa-solid fa-play"></i> View the portfolio</a>
+      </div>
+    </div>
+
+    <div class="hero-figures" aria-label="Firm figures at a glance">
+      <div class="hero-figure"><span class="fig-num" data-count="4.8">0</span><span class="fig-suffix">B</span><p>Assets under management</p></div>
+      <div class="hero-figure"><span class="fig-num" data-count="212">0</span><span class="fig-suffix"></span><p>Properties held</p></div>
+      <div class="hero-figure"><span class="fig-num" data-count="12">0</span><span class="fig-suffix"></span><p>Metro markets</p></div>
+      <div class="hero-figure"><span class="fig-num" data-count="17">0</span><span class="fig-suffix">yr</span><p>Average track record</p></div>
+    </div>
+
+    <a href="#about" class="scroll-cue" aria-label="Scroll to next section">
+      <span></span>Scroll
+    </a>
+  </section>
+
+  <!-- ============ 2. ABOUT ============ -->
+  <section class="about" id="about">
+    <div class="section-inner about-grid">
+      <div class="about-media" data-aos="fade-right">
+        <div class="framed">
+          <img src="assets/pv2.webp" alt="Stackly's acquisitions team reviewing a deal at the table" loading="lazy">
+          <span class="frame-corner tl"></span><span class="frame-corner tr"></span>
+          <span class="frame-corner bl"></span><span class="frame-corner br"></span>
+        </div>
+        <div class="about-badge">
+          <strong>Est. 2008</strong>
+          <span>Privately held, investor‑owned</span>
+        </div>
+      </div>
+
+      <div class="about-copy">
+        <p class="section-label">About Stackly</p>
+        <h2 class="section-title">A smaller book of deals, held for longer.</h2>
+        <p class="lead-p">Most investment firms grow their fee income by growing their deal count. We do the opposite — we underwrite fewer buildings, hold them longer, and put our own capital in every acquisition alongside our partners.</p>
+        <p>That discipline shows up in the numbers: a 17‑year average hold period against an industry norm closer to five, and a loss ratio under one percent across two market cycles. Every property in the portfolio is walked, inspected and modelled by our own team before it's ever offered to an investor.</p>
+
+        <div class="about-points">
+          <div class="about-point">
+            <i class="fa-solid fa-magnifying-glass-dollar"></i>
+            <div><h3>Owner‑operator underwriting</h3><p>We model every asset as if we'll own it for a decade, because we usually do.</p></div>
+          </div>
+          <div class="about-point">
+            <i class="fa-solid fa-building-shield"></i>
+            <div><h3>Capital alongside yours</h3><p>Stackly principals co‑invest in every deal — the same terms, the same risk.</p></div>
+          </div>
+        </div>
+        <a href="404.html" class="text-link">Meet the investment committee <i class="fa-solid fa-arrow-right"></i></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 3. SERVICES ============ -->
+  <section class="services" id="services">
+    <div class="section-inner">
+      <div class="services-head">
+        <p class="section-label section-label--light">What we do</p>
+        <h2 class="section-title section-title--light">Six ways to hold real estate<br class="lg-only"> without owning a roof yourself.</h2>
+      </div>
+
+      <div class="services-grid">
+        <article class="service-card" data-aos="fade-up" data-aos-delay="0">
+          <i class="fa-solid fa-house-chimney-window"></i>
+          <h3>Residential portfolios</h3>
+          <p>Single‑family and small multifamily assets acquired below replacement cost in supply‑constrained neighborhoods.</p>
+        </article>
+        <article class="service-card" data-aos="fade-up" data-aos-delay="80">
+          <i class="fa-solid fa-city"></i>
+          <h3>Commercial acquisitions</h3>
+          <p>Office, retail and mixed‑use buildings repositioned through lease‑up, renovation or change of use.</p>
+        </article>
+        <article class="service-card" data-aos="fade-up" data-aos-delay="160">
+          <i class="fa-solid fa-chart-line"></i>
+          <h3>REIT &amp; fund structures</h3>
+          <p>Pooled vehicles for investors who want diversified exposure without direct property management.</p>
+        </article>
+        <article class="service-card" data-aos="fade-up" data-aos-delay="240">
+          <i class="fa-solid fa-seedling"></i>
+          <h3>Land banking</h3>
+          <p>Strategic land positions held ahead of rezoning, infrastructure or annexation events.</p>
+        </article>
+        <article class="service-card" data-aos="fade-up" data-aos-delay="320">
+          <i class="fa-solid fa-key"></i>
+          <h3>Asset &amp; property management</h3>
+          <p>In‑house leasing, maintenance and reporting — no third‑party management fees eating into yield.</p>
+        </article>
+        <article class="service-card" data-aos="fade-up" data-aos-delay="400">
+          <i class="fa-solid fa-handshake"></i>
+          <h3>Advisory &amp; 1031 exchange</h3>
+          <p>Independent guidance on disposition timing, exchange structuring and portfolio rebalancing.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 4. PORTFOLIO (horizontal scroll) ============ -->
+  <section class="portfolio" id="portfolio">
+    <div class="section-inner portfolio-head">
+      <p class="section-label">Current holdings</p>
+      <h2 class="section-title">A sample of the book.</h2>
+      <p class="portfolio-hint"><i class="fa-solid fa-arrows-left-right"></i> Drag or scroll to browse the register</p>
+    </div>
+
+    <div class="portfolio-track" id="portfolioTrack">
+
+      <article class="lot-card">
+        <div class="lot-media"><img src="assets/pv3.webp" alt="Illuminated concrete residence acquired as Lot 014" loading="lazy"></div>
+        <div class="lot-info">
+          <span class="lot-no">Lot 014</span>
+          <h3>Ridgeline Residence</h3>
+          <p>Austin, TX — Single‑family / hold since 2019</p>
+        </div>
+      </article>
+
+      <article class="lot-card">
+        <div class="lot-media"><img src="assets/pv4.webp" alt="Low-rise commercial building acquired as Lot 027" loading="lazy"></div>
+        <div class="lot-info">
+          <span class="lot-no">Lot 027</span>
+          <h3>Fairview Commercial</h3>
+          <p>Denver, CO — Office / hold since 2021</p>
+        </div>
+      </article>
+
+      <article class="lot-card">
+        <div class="lot-media"><img src="assets/pv5.webp" alt="Concrete apartment building acquired as Lot 033" loading="lazy"></div>
+        <div class="lot-info">
+          <span class="lot-no">Lot 033</span>
+          <h3>Harbor Point Flats</h3>
+          <p>Charlotte, NC — Multifamily / hold since 2016</p>
+        </div>
+      </article>
+
+      <article class="lot-card">
+        <div class="lot-media"><img src="assets/pv6.webp" alt="Poolside residence acquired as Lot 041" loading="lazy"></div>
+        <div class="lot-info">
+          <span class="lot-no">Lot 041</span>
+          <h3>Cascade Villa</h3>
+          <p>Scottsdale, AZ — Single‑family / hold since 2022</p>
+        </div>
+      </article>
+
+      <article class="lot-card">
+        <div class="lot-media"><img src="assets/pv7.webp" alt="Glass-walled house with pool acquired as Lot 052" loading="lazy"></div>
+        <div class="lot-info">
+          <span class="lot-no">Lot 052</span>
+          <h3>Linden Court</h3>
+          <p>Raleigh, NC — Single‑family / hold since 2020</p>
+        </div>
+      </article>
+
+      <article class="lot-card">
+        <div class="lot-media"><img src="assets/pv8.webp" alt="White concrete building acquired as Lot 059" loading="lazy"></div>
+        <div class="lot-info">
+          <span class="lot-no">Lot 059</span>
+          <h3>Meadowbrook Row</h3>
+          <p>Nashville, TN — Mixed‑use / hold since 2023</p>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- ============ 5. PROCESS ============ -->
+  <section class="process" id="process">
+    <div class="section-inner">
+      <p class="section-label">How an allocation works</p>
+      <h2 class="section-title">Five steps, roughly six weeks.</h2>
+
+      <ol class="process-list">
+        <li class="process-step" data-aos="fade-up">
+          <span class="step-no">01</span>
+          <div><h3>Consultation</h3><p>We review your goals, timeline and existing exposure to real assets.</p></div>
+        </li>
+        <li class="process-step" data-aos="fade-up" data-aos-delay="60">
+          <span class="step-no">02</span>
+          <div><h3>Allocation design</h3><p>We match you to specific holdings or a pooled vehicle based on risk and liquidity needs.</p></div>
+        </li>
+        <li class="process-step" data-aos="fade-up" data-aos-delay="120">
+          <span class="step-no">03</span>
+          <div><h3>Underwriting review</h3><p>You receive the same inspection, title and financial package our committee reviewed.</p></div>
+        </li>
+        <li class="process-step" data-aos="fade-up" data-aos-delay="180">
+          <span class="step-no">04</span>
+          <div><h3>Closing</h3><p>Capital is placed through escrow with independent title and legal counsel.</p></div>
+        </li>
+        <li class="process-step" data-aos="fade-up" data-aos-delay="240">
+          <span class="step-no">05</span>
+          <div><h3>Ongoing reporting</h3><p>Quarterly statements, occupancy data and a standing line to your asset manager.</p></div>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- ============ 6. WHY STACKLY ============ -->
+  <section class="why" id="why">
+    <div class="section-inner why-grid">
+      <div class="why-media" data-aos="fade-right">
+        <div class="framed framed--tall">
+          <img src="assets/pv9.webp" alt="Stackly analysts reviewing acquisition documents in the office" loading="lazy">
+          <span class="frame-corner tl"></span><span class="frame-corner tr"></span>
+          <span class="frame-corner bl"></span><span class="frame-corner br"></span>
+        </div>
+      </div>
+
+      <div class="why-copy">
+        <p class="section-label">Why investors stay</p>
+        <h2 class="section-title">What the fee sheet doesn't show you.</h2>
+
+        <div class="why-list">
+          <div class="why-item" data-aos="fade-up">
+            <i class="fa-solid fa-scale-balanced"></i>
+            <div><h3>Fiduciary structure</h3><p>Stackly principals hold no side incentives that conflict with investor returns.</p></div>
+          </div>
+          <div class="why-item" data-aos="fade-up" data-aos-delay="60">
+            <i class="fa-solid fa-file-invoice-dollar"></i>
+            <div><h3>Transparent fee stack</h3><p>One acquisition fee, one asset‑management fee — no layered structuring charges.</p></div>
+          </div>
+          <div class="why-item" data-aos="fade-up" data-aos-delay="120">
+            <i class="fa-solid fa-people-roof"></i>
+            <div><h3>In‑house management</h3><p>Leasing and maintenance stay inside the firm, so problems get fixed, not billed.</p></div>
+          </div>
+          <div class="why-item" data-aos="fade-up" data-aos-delay="180">
+            <i class="fa-solid fa-clock-rotate-left"></i>
+            <div><h3>17‑year hold discipline</h3><p>We underwrite for a decade of ownership, not a quarterly exit.</p></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 7. TESTIMONIALS ============ -->
+  <section class="testimonials" id="testimonials">
+    <div class="section-inner">
+      <p class="section-label section-label--light">Investor notes</p>
+      <h2 class="section-title section-title--light">What partners say after a few cycles.</h2>
+
+      <div class="testi-track" id="testiTrack">
+        <article class="testi-card">
+          <i class="fa-solid fa-quote-left testi-mark"></i>
+          <p>“Stackly sent me the inspection report before I even asked for it. Three cycles in, that's still the thing I mention to other investors.”</p>
+          <div class="testi-person">
+            <img src="assets/pv10.webp" alt="Portrait of David Renner" loading="lazy">
+            <div><strong>David Renner</strong><span>Limited partner since 2018</span></div>
+          </div>
+        </article>
+
+        <article class="testi-card">
+          <i class="fa-solid fa-quote-left testi-mark"></i>
+          <p>“I've used four sponsors over fifteen years. Stackly is the only one whose quarterly report I actually read cover to cover.”</p>
+          <div class="testi-person">
+            <img src="assets/pv11.webp" alt="Portrait of Priya Anand" loading="lazy">
+            <div><strong>Priya Anand</strong><span>Family office principal</span></div>
+          </div>
+        </article>
+
+        <article class="testi-card">
+          <i class="fa-solid fa-quote-left testi-mark"></i>
+          <p>“The land banking allocation matured exactly on the timeline they modelled — no surprises, no re‑forecast calls.”</p>
+          <div class="testi-person">
+            <img src="assets/pv12.webp" alt="Portrait of Marcus Chen" loading="lazy">
+            <div><strong>Marcus Chen</strong><span>Limited partner since 2015</span></div>
+          </div>
+        </article>
+      </div>
+
+      <div class="testi-dots" id="testiDots"></div>
+    </div>
+  </section>
+
+  <!-- ============ 8. BLOG ============ -->
+  <section class="blog" id="blog">
+    <div class="section-inner">
+      <div class="blog-head">
+        <div>
+          <p class="section-label">Field notes</p>
+          <h2 class="section-title">Reading before you allocate.</h2>
+        </div>
+        <a href="404.html" class="text-link">All articles <i class="fa-solid fa-arrow-right"></i></a>
+      </div>
+
+      <div class="blog-grid">
+        <article class="blog-card" data-aos="fade-up">
+          <a href="404.html" class="blog-media">
+            <img src="assets/pv13.webp" alt="Investment committee reviewing a market thesis" loading="lazy">
+          </a>
+          <div class="blog-body">
+            <span class="blog-tag">Market outlook</span>
+            <h3><a href="#">Why secondary metros are re‑rating faster than the coasts</a></h3>
+            <p>A look at the migration and cap‑rate data behind our 2026 acquisition thesis.</p>
+            <span class="blog-meta">6 min read · Feb 2026</span>
+          </div>
+        </article>
+
+        <article class="blog-card" data-aos="fade-up" data-aos-delay="80">
+          <a href="404.html" class="blog-media">
+            <img src="assets/pv14.webp" alt="Analysts discussing a deal at a wooden table" loading="lazy">
+          </a>
+          <div class="blog-body">
+            <span class="blog-tag">Investor guide</span>
+            <h3><a href="#">1031 exchanges, explained without the jargon</a></h3>
+            <p>What actually qualifies, the deadlines that matter, and where investors lose money.</p>
+            <span class="blog-meta">8 min read · Jan 2026</span>
+          </div>
+        </article>
+
+        <article class="blog-card" data-aos="fade-up" data-aos-delay="160">
+          <a href="404.html" class="blog-media">
+            <img src="assets/pv15.webp" alt="Team reviewing property documents" loading="lazy">
+          </a>
+          <div class="blog-body">
+            <span class="blog-tag">Underwriting</span>
+            <h3><a href="#">The five numbers we won't close a deal without</a></h3>
+            <p>Inside the underwriting checklist our acquisitions team runs on every property.</p>
+            <span class="blog-meta">5 min read · Dec 2025</span>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 9. CTA ============ -->
+  <section class="cta" id="cta">
+    <img class="cta-bg" src="assets/pv16.webp" alt="" loading="lazy">
+    <div class="cta-scrim"></div>
+    <div class="section-inner cta-inner">
+      <h2 class="cta-title">Ready to see the current offering memorandum?</h2>
+      <p>Minimum allocations start at $50,000. We'll walk you through the active raise and the properties behind it in one call.</p>
+      <a href="404.html" class="btn-solid btn-solid--light">Request the memorandum <i class="fa-solid fa-arrow-right-long"></i></a>
+    </div>
+  </section>
+
+  <!-- ============ 10. CONTACT ============ -->
+  <section class="contact" id="contact">
+    <div class="section-inner contact-grid">
+      <div class="contact-copy">
+        <p class="section-label">Talk to us</p>
+        <h2 class="section-title">Speak with an allocations lead.</h2>
+        <p class="lead-p">No call center — every enquiry reaches someone on the investment team directly, usually within one business day.</p>
+
+        <ul class="contact-list">
+          <li><i class="fa-solid fa-location-dot"></i><span>400 Stackly Plaza, Suite 1100<br>Austin, TX 78701</span></li>
+          <li><i class="fa-solid fa-phone"></i><span>+1 (415) 555‑0148</span></li>
+          <li><i class="fa-solid fa-envelope"></i><span>invest@stacklyproperty.example</span></li>
+          <li><i class="fa-solid fa-clock"></i><span>Mon–Fri, 8:00–18:00 CT</span></li>
+        </ul>
+
+        <div class="contact-socials">
+          <a href="404.html" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+          <a href="404.html" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+          <a href="404.html" aria-label="X"><i class="fa-brands fa-x-twitter"></i></a>
+        </div>
+      </div>
+
+      <form class="contact-form" id="contactForm" novalidate>
+        <div class="form-row">
+          <div class="field">
+            <label for="fName">Name</label>
+            <input id="fName" name="name" type="text" required placeholder="Jordan Lee">
+          </div>
+          <div class="field">
+            <label for="fEmail">Email</label>
+            <input id="fEmail" name="email" type="email" required placeholder="jordan@email.com">
+          </div>
+        </div>
+        <div class="field">
+          <label for="fAmount">Approximate allocation</label>
+          <select id="fAmount" name="amount">
+            <option>$50,000 – $150,000</option>
+            <option>$150,000 – $500,000</option>
+            <option>$500,000+</option>
+            <option>Not sure yet</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="fMsg">Message</label>
+          <textarea id="fMsg" name="message" rows="4" placeholder="Tell us about your timeline and goals"></textarea>
+        </div>
+        <button type="submit" class="btn-solid btn-full">Send enquiry <i class="fa-solid fa-arrow-right-long"></i></button>
+        <p class="form-note" id="formNote" role="status"></p>
+      </form>
+    </div>
+  </section>
+
+</main>
+
+<!-- ============ FOOTER ============ -->
+<footer class="site-footer">
+  <div class="section-inner footer-grid">
+    <div class="footer-brand">
+      <a href="#home" class="brand brand--footer">
+        <span class="brand-mark-img brand-mark-img--footer" role="img" aria-label="Stackly logo"></span>
+      </a>
+      <p>Real assets, precisely placed. Registered investment adviser, member of the National Real Estate Investment Association.</p>
+    </div>
+
+    <div class="footer-col">
+      <h4>Navigate</h4>
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#services">Services</a>
+      <a href="#portfolio">Portfolio</a>
+      <a href="#blog">Blog</a>
+      <a href="#contact">Contact</a>
+    </div>
+
+    <div class="footer-col">
+      <h4>Services</h4>
+      <a href="#services">Residential portfolios</a>
+      <a href="#services">Commercial acquisitions</a>
+      <a href="#services">REIT &amp; fund structures</a>
+      <a href="#services">Land banking</a>
+      <a href="#services">Advisory &amp; 1031 exchange</a>
+    </div>
+
+    <div class="footer-col footer-col--newsletter">
+      <h4>Market notes, monthly</h4>
+      <p>One email a month — no noise, no drip campaign.</p>
+      <form class="newsletter-form" id="newsletterForm">
+        <input type="email" required placeholder="you@email.com" aria-label="Email address">
+        <button type="submit" aria-label="Subscribe"><i class="fa-solid fa-arrow-right"></i></button>
+      </form>
+      <div class="footer-socials">
+        <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+        <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+        <a href="#" aria-label="X"><i class="fa-brands fa-x-twitter"></i></a>
+        <a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-bottom section-inner">
+    <p>© <span id="year"></span> Stackly Property Investment. All rights reserved.</p>
+    <div class="footer-legal">
+      <a href="#">Privacy policy</a>
+      <a href="#">Terms</a>
+      <a href="#">Risk disclosures</a>
+    </div>
+  </div>
+</footer>
+
+<button class="back-to-top" id="backToTop" aria-label="Back to top"><i class="fa-solid fa-arrow-up"></i></button>
+
+<!-- Scripts -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+<script src="script.js"></script>
+</body>
+</html>

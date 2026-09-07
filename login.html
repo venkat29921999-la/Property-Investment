@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Log In — Stackly Property Investment</title>
+<meta name="description" content="Log in to your Stackly account to track allocations, review offerings, and message the investment team.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link rel="stylesheet" href="style.css">
+</head>
+<body class="au-body">
+
+<div class="cursor-dot" aria-hidden="true"></div>
+<div class="cursor-ring" aria-hidden="true"></div>
+
+<div class="preloader" id="preloader" aria-hidden="true">
+  <svg class="preloader-mark" viewBox="0 0 60 60" fill="none">
+    <circle cx="30" cy="30" r="26" stroke="currentColor" stroke-width="1.2"/>
+    <path class="preloader-line" d="M8 30 A22 22 0 0 1 52 30" stroke="currentColor" stroke-width="1.2"/>
+  </svg>
+</div>
+
+<div class="au-topbar">
+  <a href="index.html" class="brand" aria-label="Stackly — home">
+    <span class="brand-mark-img" role="img" aria-label="Stackly logo"></span>
+  </a>
+  <a href="index.html" class="au-back-home"><i class="fa-solid fa-arrow-left"></i> <span>Back to home</span></a>
+</div>
+
+<main class="au-shell">
+
+  <div class="au-visual">
+    <div class="au-visual-mesh" aria-hidden="true"></div>
+    <div class="au-orbit" aria-hidden="true">
+      <span class="au-orbit-dot" style="--r:120px; animation-duration:14s;"></span>
+      <span class="au-orbit-dot" style="--r:160px; animation-duration:20s; animation-direction:reverse;"></span>
+      <span class="au-orbit-dot" style="--r:90px; animation-duration:11s;"></span>
+      <span class="au-orbit-dot" style="--r:200px; animation-duration:26s; animation-direction:reverse;"></span>
+      <span class="au-orbit-dot" style="--r:150px; animation-duration:17s;"></span>
+    </div>
+
+    <div class="au-visual-content">
+      <p class="section-label">Welcome back</p>
+      <h2>Real assets, precisely placed.</h2>
+      <p>Sign in to track your allocations, review new offerings, and message the investment team directly.</p>
+      <div class="au-visual-stats">
+        <div><strong class="fig-num" data-count="140">0</strong><span>Notes published</span></div>
+        <div><strong class="fig-num" data-count="98">0</strong><span>% reply rate</span></div>
+        <div><strong class="fig-num" data-count="3">0</strong><span>Branches</span></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="au-form-side">
+    <div class="au-form-wrap">
+      <p class="section-label">Log in</p>
+      <h1>Log in to Stackly</h1>
+      <p class="lead-p">New here? <a href="signup.html">Create an account</a></p>
+
+      <form class="au-form" id="loginForm" novalidate>
+
+        <div class="au-field">
+          <input type="email" id="loginEmail" name="email" required placeholder=" " autocomplete="email">
+          <label for="loginEmail">Email address</label>
+          <span class="au-field-error">Enter a valid email address</span>
+        </div>
+
+        <div class="au-field">
+          <input type="password" id="loginPassword" name="password" required minlength="6" placeholder=" " autocomplete="current-password">
+          <label for="loginPassword">Password</label>
+          <button type="button" class="au-eye-toggle" data-target="loginPassword" aria-label="Show password" aria-pressed="false">
+            <i class="fa-solid fa-eye"></i>
+          </button>
+          <span class="au-field-error">Password must be at least 6 characters</span>
+        </div>
+
+        <div class="au-role-row">
+          <span class="au-role-label">Log in as</span>
+          <div class="au-role-toggle" id="loginRoleToggle">
+            <span class="au-role-indicator" id="loginRoleIndicator"></span>
+            <button type="button" class="au-role-btn is-active" data-role="user"><i class="fa-solid fa-user"></i> User</button>
+            <button type="button" class="au-role-btn" data-role="admin"><i class="fa-solid fa-user-shield"></i> Admin</button>
+          </div>
+        </div>
+
+        <div class="au-options-row">
+          <a href="404.html" class="au-forgot">Forgot password?</a>
+        </div>
+
+        <button type="submit" class="au-submit" id="loginSubmit">
+          <span class="au-submit-text">Log in</span>
+          <span class="au-spinner" aria-hidden="true"></span>
+        </button>
+      </form>
+
+      <p class="au-switch">Don't have an account? <a href="signup.html">Sign up</a></p>
+    </div>
+  </div>
+
+</main>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>

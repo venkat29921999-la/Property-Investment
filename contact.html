@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact — Stackly Property Investment</title>
+<meta name="description" content="Talk to the Stackly investment team — call, email, live chat, visit one of our offices, or book a call directly. We read every enquiry ourselves.">
+
+<!-- Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+<!-- Font Awesome (icons only, per brief) -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+<!-- AOS (scroll reveal) -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ============ CUSTOM CURSOR (desktop) ============ -->
+<div class="cursor-dot" aria-hidden="true"></div>
+<div class="cursor-ring" aria-hidden="true"></div>
+
+<!-- ============ PRELOADER ============ -->
+<div class="preloader" id="preloader" aria-hidden="true">
+  <svg class="preloader-mark" viewBox="0 0 60 60" fill="none">
+    <circle cx="30" cy="30" r="26" stroke="currentColor" stroke-width="1.2"/>
+    <path class="preloader-line" d="M8 30 A22 22 0 0 1 52 30" stroke="currentColor" stroke-width="1.2"/>
+  </svg>
+</div>
+
+<!-- ============ HEADER (identical to index.html) ============ -->
+<header class="site-header" id="siteHeader">
+  <div class="header-inner">
+
+    <a href="index.html" class="brand" aria-label="Stackly — home">
+      <span class="brand-mark-img" role="img" aria-label="Stackly logo"></span>
+    </a>
+
+    <nav class="nav-group nav-main" aria-label="Primary">
+      <a href="index.html" class="nav-link">Home</a>
+      <a href="about.html" class="nav-link">About</a>
+      <a href="services.html" class="nav-link">Services</a>
+      <a href="blog.html" class="nav-link">Blog</a>
+      <a href="contact.html" class="nav-link is-active">Contact</a>
+    </nav>
+
+    <a href="login.html" class="btn-login"><i class="fa-solid fa-user"></i><span>Log in</span></a>
+
+    <button class="hamburger" id="hamburgerBtn" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<!-- ============ MOBILE MENU (identical to index.html) ============ -->
+<div class="mobile-menu" id="mobileMenu">
+  <nav aria-label="Mobile primary">
+    <a href="index.html" class="mobile-link"><span>01</span>Home</a>
+    <a href="about.html" class="mobile-link"><span>02</span>About</a>
+    <a href="services.html" class="mobile-link"><span>03</span>Services</a>
+    <a href="blog.html" class="mobile-link"><span>04</span>Blog</a>
+    <a href="contact.html" class="mobile-link"><span>05</span>Contact</a>
+  </nav>
+  <a href="login.html" class="btn-outline mobile-login"><i class="fa-solid fa-user"></i> Log in</a>
+  <div class="mobile-menu-foot">
+    <div class="mobile-socials">
+      <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+      <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+      <a href="#" aria-label="X"><i class="fa-brands fa-x-twitter"></i></a>
+    </div>
+    <p>+1 (415) 555‑0148</p>
+  </div>
+</div>
+<div class="mobile-menu-backdrop" id="mobileBackdrop"></div>
+
+<main id="contact-top">
+
+  <!-- ============ 1. HERO — text-scramble headline + ambient drifting particles ============ -->
+  <section class="ct-hero" id="contactHero">
+    <div class="ct-hero-media" aria-hidden="true">
+      <img src="assets/pv7.webp" alt="" loading="eager">
+      <div class="ct-hero-overlay"></div>
+    </div>
+    <div class="ct-hero-particles" id="ctParticles" aria-hidden="true"></div>
+
+    <div class="section-inner ct-hero-inner">
+      <p class="section-label section-label--light">Get in touch</p>
+      <h1 class="ct-scramble" id="ctScramble" data-final="Let's start a conversation.">Let's start a conversation.</h1>
+      <p class="lead-p ct-hero-lead">Whether you're allocating capital, exploring a partnership, or just have a question — a real person on the investment team reads every message.</p>
+      <div class="ct-hero-actions">
+        <a href="404.html" class="btn-solid btn-solid--light">Send a message <i class="fa-solid fa-arrow-right"></i></a>
+        <a href="404.html" class="btn-ghost">Book a call</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 2. CONTACT METHODS — cursor-spotlight cards ============ -->
+  <section class="ct-methods" id="methods">
+    <div class="section-inner">
+      <p class="section-label">Choose a channel</p>
+      <h2 class="section-title">However you'd rather reach us.</h2>
+
+      <div class="ct-method-grid" id="ctMethodGrid">
+        <a href="404.html" class="ct-method-card">
+          <span class="ct-method-icon"><i class="fa-solid fa-phone"></i></span>
+          <h3>Call us</h3>
+          <p>Mon–Fri, 8:00–18:00 CT</p>
+          <span class="ct-method-value">+1 (415) 555‑0148</span>
+        </a>
+        <a href="404.html" class="ct-method-card">
+          <span class="ct-method-icon"><i class="fa-solid fa-envelope"></i></span>
+          <h3>Email us</h3>
+          <p>Usually within one business day</p>
+          <span class="ct-method-value">invest@stacklyproperty.example</span>
+        </a>
+        <a href="404.html" class="ct-method-card">
+          <span class="ct-method-icon"><i class="fa-solid fa-message"></i></span>
+          <h3>Send a message</h3>
+          <p>The form below reaches us directly</p>
+          <span class="ct-method-value">No call center, ever</span>
+        </a>
+        <a href="404.html" class="ct-method-card">
+          <span class="ct-method-icon"><i class="fa-solid fa-building"></i></span>
+          <h3>Visit an office</h3>
+          <p>Bengaluru · Hyderabad · Coimbatore</p>
+          <span class="ct-method-value">By appointment</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 3. CONTACT FORM — live progress bar + hand-drawn check + confetti ============ -->
+  <section class="ct-form-section" id="form">
+    <div class="section-inner ct-form-inner">
+
+      <div class="ct-form-copy">
+        <p class="section-label section-label--light">Send a message</p>
+        <h2 class="section-title section-title--light">Tell us where to start.</h2>
+        <p class="lead-p">Three fields are all we need — name, email and a message. Everything else is optional context that helps us reply faster.</p>
+
+        <ul class="ct-form-points">
+          <li><i class="fa-solid fa-check"></i>Read personally by the investment team</li>
+          <li><i class="fa-solid fa-check"></i>No automated call center, ever</li>
+          <li><i class="fa-solid fa-check"></i>Replies average under two business hours</li>
+        </ul>
+      </div>
+
+      <div class="ct-form-card">
+        <div class="ct-progress" aria-hidden="true">
+          <span class="ct-progress-seg" data-seg="0"></span>
+          <span class="ct-progress-seg" data-seg="1"></span>
+          <span class="ct-progress-seg" data-seg="2"></span>
+        </div>
+
+        <form class="ct-form" id="ctForm" novalidate>
+          <div class="ct-field">
+            <input id="ctName" name="name" type="text" required placeholder=" ">
+            <label for="ctName">Full name</label>
+          </div>
+          <div class="ct-field">
+            <input id="ctEmail" name="email" type="email" required placeholder=" ">
+            <label for="ctEmail">Email address</label>
+          </div>
+          <div class="ct-field">
+            <input id="ctPhone" name="phone" type="tel" placeholder=" ">
+            <label for="ctPhone">Phone <span>(optional)</span></label>
+          </div>
+          <div class="ct-field">
+            <textarea id="ctMsg" name="message" rows="4" required placeholder=" "></textarea>
+            <label for="ctMsg">Your message</label>
+          </div>
+
+          <button type="submit" class="ct-submit" id="ctSubmit">
+            <span class="ct-submit-text">Send message</span>
+            <svg class="ct-check" viewBox="0 0 52 52" aria-hidden="true">
+              <circle class="ct-check-circle" cx="26" cy="26" r="23" fill="none"/>
+              <path class="ct-check-mark" fill="none" d="M14 27l7 7 17-17"/>
+            </svg>
+          </button>
+          <div class="ct-confetti" id="ctConfetti" aria-hidden="true"></div>
+          <p class="ct-form-note" id="ctFormNote" role="status"></p>
+        </form>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ============ 4. OFFICES — tabbed branch switcher with pin-drop + crossfade ============ -->
+  <section class="ct-offices" id="offices">
+    <div class="section-inner">
+      <p class="section-label">Our branches</p>
+      <h2 class="section-title">Three cities, one desk.</h2>
+
+      <div class="ct-office-tabs" id="ctOfficeTabs">
+        <button class="ct-office-tab is-active" data-office="bengaluru">Bengaluru - Stackly</button>
+        <button class="ct-office-tab" data-office="hyderabad">Hyderabad - Stackly</button>
+        <button class="ct-office-tab" data-office="coimbatore">Coimbatore - Stackly</button>
+      </div>
+
+      <div class="ct-office-panel" id="ctOfficePanel">
+
+        <div class="ct-office-media">
+          <span class="ct-office-pin" id="ctOfficePin"><i class="fa-solid fa-location-dot"></i></span>
+          <img id="ctOfficeImg" src="assets/pv8.webp" alt="Stackly's Bengaluru office building">
+        </div>
+
+        <div class="ct-office-info">
+          <span class="ct-office-tag" id="ctOfficeTag">Headquarters</span>
+          <h3 id="ctOfficeCity">Bengaluru - Stackly</h3>
+          <p id="ctOfficeAddress">Khata No 10, Begur - Koppa Rd, in front of SNN Raj Serenity<br>Suraksha Nagar, Yelenahalli, Begur, Bengaluru, Karnataka 560114</p>
+          <div class="ct-office-meta">
+            <span><i class="fa-solid fa-phone"></i> <span id="ctOfficePhone">+91 80 555 0123</span></span>
+            <span><i class="fa-solid fa-clock"></i> <span id="ctOfficeHours">Mon–Sat, 10:00–18:00 IST</span></span>
+          </div>
+          <a href="404.html" class="ct-directions-btn" id="ctDirectionsBtn" target="_blank" rel="noopener">
+            <i class="fa-solid fa-location-arrow"></i> Get directions from your location
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 5. MAP — real embedded Google Map with animated branch switcher ============ -->
+  <section class="ct-map" id="map">
+    <div class="section-inner">
+      <p class="section-label section-label--light">Where we operate</p>
+      <h2 class="section-title section-title--light">Find us on the map.</h2>
+      <p class="lead-p ct-map-lead">Select a branch — the map and the office panel above update together.</p>
+
+      <div class="ct-map-shell">
+        <div class="ct-map-frame-wrap" id="ctMapFrameWrap">
+          <div class="ct-map-loading" id="ctMapLoading" aria-hidden="true"><span></span><span></span><span></span></div>
+          <iframe
+            id="ctMapFrame"
+            title="Map of Stackly's Bengaluru branch"
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            src="https://maps.google.com/maps?q=Khata+No+10+Begur+Koppa+Rd+Begur+Bengaluru+Karnataka+560114&t=&z=15&ie=UTF8&iwloc=&output=embed">
+          </iframe>
+        </div>
+
+        <div class="ct-map-city-list" id="ctMapCityList">
+          <button class="ct-map-city is-active" data-office="bengaluru">
+            <span class="ct-map-city-indicator"></span>
+            <i class="fa-solid fa-location-dot"></i>
+            <span class="ct-map-city-text"><strong>Bengaluru - Stackly</strong><small>Headquarters</small></span>
+          </button>
+          <button class="ct-map-city" data-office="hyderabad">
+            <span class="ct-map-city-indicator"></span>
+            <i class="fa-solid fa-location-dot"></i>
+            <span class="ct-map-city-text"><strong>Hyderabad - Stackly</strong><small>Telangana desk</small></span>
+          </button>
+          <button class="ct-map-city" data-office="coimbatore">
+            <span class="ct-map-city-indicator"></span>
+            <i class="fa-solid fa-location-dot"></i>
+            <span class="ct-map-city-text"><strong>Coimbatore - Stackly</strong><small>Manufacturing &amp; textile desk</small></span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 6. RESPONSE TIME — sonar pulse badge ============ -->
+  <section class="ct-response" id="response">
+    <div class="section-inner ct-response-inner">
+      <div class="ct-radar">
+        <span class="ct-radar-ring ct-radar-ring-1"></span>
+        <span class="ct-radar-ring ct-radar-ring-2"></span>
+        <span class="ct-radar-ring ct-radar-ring-3"></span>
+        <div class="ct-radar-core">
+          <strong>&lt; 2 hrs</strong>
+          <span>Average first reply</span>
+        </div>
+      </div>
+
+      <div class="ct-response-stats">
+        <div class="ct-response-stat"><strong>98%</strong><span>Enquiries answered within one business day</span></div>
+        <div class="ct-response-stat"><strong>24/7</strong><span>The form and mailbox are always open</span></div>
+        <div class="ct-response-stat"><strong>0</strong><span>Call-center transfers — ever</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 7. TESTIMONIAL — scroll-driven word highlight ============ -->
+  <section class="ct-quote" id="quote">
+    <div class="section-inner">
+      <svg class="ct-quote-mark" viewBox="0 0 60 44" aria-hidden="true"><path d="M17.5 0C7.8 4.9 0 15.6 0 26.4 0 36.1 6.6 44 16.2 44c8 0 13.8-6 13.8-13.7 0-7.2-5-12.4-11.6-12.4-1.3 0-2.5.2-3.2.5C16.8 11 21.6 4 29.6.9L17.5 0Zm31.7 0C39.5 4.9 31.7 15.6 31.7 26.4c0 9.7 6.6 17.6 16.2 17.6 8 0 13.8-6 13.8-13.7 0-7.2-5-12.4-11.6-12.4-1.3 0-2.5.2-3.2.5C48.5 11 53.3 4 61.3.9L49.2 0Z" fill="currentColor"/></svg>
+      <p class="ct-quote-text" id="ctQuoteText">Priya's memo answered questions our own diligence team hadn't thought to ask yet. That kind of transparency is rare from a sponsor, and it's the reason we came back for a second allocation.</p>
+      <div class="ct-quote-author">
+        <span class="ct-quote-avatar">RK</span>
+        <div><strong>R. Kapoor</strong><span>Principal, family office investor</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 8. SCHEDULE A CALL — sliding day strip + staggered time slots ============ -->
+  <section class="ct-schedule" id="schedule">
+    <div class="section-inner">
+      <p class="section-label section-label--light">Prefer to talk?</p>
+      <h2 class="section-title section-title--light">Book fifteen minutes with the team.</h2>
+      <p class="lead-p ct-schedule-lead">Pick a day, then a time that works — we'll send a calendar invite straight away.</p>
+
+      <div class="ct-day-strip" id="ctDayStrip">
+        <span class="ct-day-indicator" id="ctDayIndicator"></span>
+        <button class="ct-day is-active" data-day="0"><span class="ct-day-name">Mon</span><span class="ct-day-num">08</span></button>
+        <button class="ct-day" data-day="1"><span class="ct-day-name">Tue</span><span class="ct-day-num">09</span></button>
+        <button class="ct-day" data-day="2"><span class="ct-day-name">Wed</span><span class="ct-day-num">10</span></button>
+        <button class="ct-day" data-day="3"><span class="ct-day-name">Thu</span><span class="ct-day-num">11</span></button>
+        <button class="ct-day" data-day="4"><span class="ct-day-name">Fri</span><span class="ct-day-num">12</span></button>
+      </div>
+
+      <div class="ct-slot-grid" id="ctSlotGrid">
+        <button class="ct-slot">9:00 AM</button>
+        <button class="ct-slot">10:30 AM</button>
+        <button class="ct-slot">1:00 PM</button>
+        <button class="ct-slot">2:30 PM</button>
+        <button class="ct-slot">4:00 PM</button>
+        <button class="ct-slot">5:15 PM</button>
+      </div>
+
+      <div class="ct-schedule-confirm" id="ctScheduleConfirm" role="status">
+        <i class="fa-solid fa-circle-check"></i>
+        <span>Booked for <strong id="ctConfirmDetail">Mon 08, 9:00 AM</strong> — a calendar invite is on its way.</span>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- ============ FOOTER (identical to index.html) ============ -->
+<footer class="site-footer">
+  <div class="section-inner footer-grid">
+    <div class="footer-brand">
+      <a href="index.html" class="brand brand--footer">
+        <span class="brand-mark-img brand-mark-img--footer" role="img" aria-label="Stackly logo"></span>
+      </a>
+      <p>Real assets, precisely placed. Registered investment adviser, member of the National Real Estate Investment Association.</p>
+    </div>
+
+    <div class="footer-col">
+      <h4>Navigate</h4>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="index.html#services">Services</a>
+      <a href="index.html#portfolio">Portfolio</a>
+      <a href="blog.html">Blog</a>
+      <a href="contact.html">Contact</a>
+    </div>
+
+    <div class="footer-col">
+      <h4>Services</h4>
+      <a href="index.html#services">Residential portfolios</a>
+      <a href="index.html#services">Commercial acquisitions</a>
+      <a href="index.html#services">REIT &amp; fund structures</a>
+      <a href="index.html#services">Land banking</a>
+      <a href="index.html#services">Advisory &amp; 1031 exchange</a>
+    </div>
+
+    <div class="footer-col footer-col--newsletter">
+      <h4>Market notes, monthly</h4>
+      <p>One email a month — no noise, no drip campaign.</p>
+      <form class="newsletter-form" id="newsletterForm">
+        <input type="email" required placeholder="you@email.com" aria-label="Email address">
+        <button type="submit" aria-label="Subscribe"><i class="fa-solid fa-arrow-right"></i></button>
+      </form>
+      <div class="footer-socials">
+        <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+        <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+        <a href="#" aria-label="X"><i class="fa-brands fa-x-twitter"></i></a>
+        <a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-bottom section-inner">
+    <p>© <span id="year"></span> Stackly Property Investment. All rights reserved.</p>
+    <div class="footer-legal">
+      <a href="#">Privacy policy</a>
+      <a href="#">Terms</a>
+      <a href="#">Risk disclosures</a>
+    </div>
+  </div>
+</footer>
+
+<button class="back-to-top" id="backToTop" aria-label="Back to top"><i class="fa-solid fa-arrow-up"></i></button>
+
+<!-- Scripts -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+<script src="script.js"></script>
+</body>
+</html>

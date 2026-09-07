@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>My Dashboard — Stackly Property Investment</title>
+<meta name="description" content="Your Stackly investor dashboard — portfolio value, active investments, messages, and documents.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link rel="stylesheet" href="style.css">
+</head>
+<body class="dsh-body" data-role="user">
+
+<div class="cursor-dot" aria-hidden="true"></div>
+<div class="cursor-ring" aria-hidden="true"></div>
+
+<div class="preloader" id="preloader" aria-hidden="true">
+  <svg class="preloader-mark" viewBox="0 0 60 60" fill="none">
+    <circle cx="30" cy="30" r="26" stroke="currentColor" stroke-width="1.2"/>
+    <path class="preloader-line" d="M8 30 A22 22 0 0 1 52 30" stroke="currentColor" stroke-width="1.2"/>
+  </svg>
+</div>
+
+<div class="dsh-shell">
+
+  <aside class="dsh-sidebar" id="dshSidebar">
+    <div class="dsh-sidebar-brand">
+      <span class="brand-mark-img" role="img" aria-label="Stackly logo"></span>
+    </div>
+    <nav class="dsh-nav">
+      <a href="#overview" class="dsh-nav-link is-active" data-view="overview"><i class="fa-solid fa-table-cells-large"></i> Overview</a>
+      <a href="#investments" class="dsh-nav-link" data-view="investments"><i class="fa-solid fa-chart-pie"></i> My Investments</a>
+      <a href="#messages" class="dsh-nav-link" data-view="messages"><i class="fa-solid fa-envelope"></i> Messages</a>
+      <a href="#documents" class="dsh-nav-link" data-view="documents"><i class="fa-solid fa-file-lines"></i> Documents</a>
+      <a href="#settings" class="dsh-nav-link" data-view="settings"><i class="fa-solid fa-gear"></i> Settings</a>
+      <div class="dsh-nav-divider"></div>
+    </nav>
+    <button class="dsh-logout" id="dshLogout"><i class="fa-solid fa-arrow-right-from-bracket"></i> Log out</button>
+  </aside>
+
+  <div class="dsh-backdrop" id="dshBackdrop"></div>
+
+  <div class="dsh-main">
+
+    <header class="dsh-topbar">
+      <button class="dsh-hamburger" id="dshHamburger" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <div class="dsh-search">
+        <i class="fa-solid fa-magnifying-glass"></i>
+        <input type="text" placeholder="Search investments, documents…">
+      </div>
+      <div class="dsh-topbar-right">
+        <a href="#messages" class="dsh-bell" data-goto-view="messages" aria-label="Messages"><i class="fa-regular fa-bell"></i><span class="dsh-bell-dot"></span></a>
+        <div class="dsh-profile">
+          <span class="dsh-avatar" id="dshAvatar">U</span>
+          <span class="dsh-profile-text"><strong id="dshProfileName">Investor</strong><span>User</span></span>
+        </div>
+      </div>
+    </header>
+
+    <div class="dsh-content">
+
+      <!-- ============ OVERVIEW ============ -->
+      <section class="dsh-view is-active" data-view="overview">
+      <div class="dsh-welcome">
+        <h1 id="dshGreeting">Good morning, there 👋</h1>
+        <p>Here's how your portfolio is doing.</p>
+      </div>
+
+      <div class="dsh-stat-grid">
+        <div class="dsh-stat-card" style="animation-delay:0s">
+          <div class="dsh-stat-top">
+            <span class="dsh-stat-icon"><i class="fa-solid fa-sack-dollar"></i></span>
+            <span class="dsh-stat-trend is-up"><i class="fa-solid fa-arrow-up"></i> 8.2%</span>
+          </div>
+          <div class="dsh-stat-value">$<span class="fig-num" data-count="128">0</span><span class="fig-suffix">K</span></div>
+          <div class="dsh-stat-label">Portfolio value</div>
+        </div>
+        <div class="dsh-stat-card" style="animation-delay:0.08s">
+          <div class="dsh-stat-top">
+            <span class="dsh-stat-icon"><i class="fa-solid fa-building-columns"></i></span>
+            <span class="dsh-stat-trend is-up"><i class="fa-solid fa-arrow-up"></i> 1</span>
+          </div>
+          <div class="dsh-stat-value"><span class="fig-num" data-count="4">0</span></div>
+          <div class="dsh-stat-label">Active investments</div>
+        </div>
+        <div class="dsh-stat-card" style="animation-delay:0.16s">
+          <div class="dsh-stat-top">
+            <span class="dsh-stat-icon"><i class="fa-solid fa-calendar-check"></i></span>
+            <span class="dsh-stat-trend is-up">Mar 15</span>
+          </div>
+          <div class="dsh-stat-value">$<span class="fig-num" data-count="2140">0</span></div>
+          <div class="dsh-stat-label">Next payout</div>
+        </div>
+        <div class="dsh-stat-card" style="animation-delay:0.24s">
+          <div class="dsh-stat-top">
+            <span class="dsh-stat-icon"><i class="fa-solid fa-file-lines"></i></span>
+            <span class="dsh-stat-trend is-up"><i class="fa-solid fa-arrow-up"></i> 2</span>
+          </div>
+          <div class="dsh-stat-value"><span class="fig-num" data-count="11">0</span></div>
+          <div class="dsh-stat-label">Documents</div>
+        </div>
+      </div>
+
+      <div class="dsh-grid-2">
+        <div class="dsh-panel">
+          <div class="dsh-panel-head">
+            <h2>Messages <span class="dsh-badge" id="dshMailBadge">0</span></h2>
+            <div class="dsh-mail-tabs" id="dshMailTabs">
+              <button class="dsh-mail-tab is-active" data-filter="all">All</button>
+              <button class="dsh-mail-tab" data-filter="unread">Unread</button>
+            </div>
+          </div>
+          <div class="dsh-mail-list" id="dshMailList"><!-- rendered dynamically by script.js --></div>
+          <button class="dsh-view-all" data-goto-view="messages">View all messages <i class="fa-solid fa-arrow-right"></i></button>
+        </div>
+
+        <div class="dsh-panel">
+          <div class="dsh-panel-head"><h2>Recent activity</h2></div>
+          <div class="dsh-timeline">
+            <div class="dsh-timeline-item" style="animation-delay:0s"><strong>Payout received</strong><span>$2,140 deposited from Cedar Row Apartments — 2 days ago</span></div>
+            <div class="dsh-timeline-item" style="animation-delay:0.08s"><strong>Document uploaded</strong><span>2024 K-1 tax form is ready — 4 days ago</span></div>
+            <div class="dsh-timeline-item" style="animation-delay:0.16s"><strong>New note published</strong><span>"Cap rates are compressing again" — 5 days ago</span></div>
+            <div class="dsh-timeline-item" style="animation-delay:0.24s"><strong>Investment update</strong><span>Cedar Row Q1 performance report available — 1 week ago</span></div>
+            <div class="dsh-timeline-item" style="animation-delay:0.32s"><strong>Allocation confirmed</strong><span>$15,000 into Sunbelt Industrial Fund II — 2 weeks ago</span></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="dsh-panel" style="margin-bottom:0;">
+        <div class="dsh-panel-head">
+          <h2>My investments</h2>
+          <button class="dsh-view-all" data-goto-view="investments">View all investments <i class="fa-solid fa-arrow-right"></i></button>
+        </div>
+        <div style="padding:22px;">
+          <div class="dsh-invest-grid">
+            <div class="dsh-invest-card">
+              <div class="dsh-invest-top">
+                <div><h4>Cedar Row Apartments</h4><span class="dsh-invest-type">Multifamily · Austin, TX</span></div>
+                <span class="dsh-invest-gain is-up"><i class="fa-solid fa-arrow-up"></i> 8.2%</span>
+              </div>
+              <div class="dsh-invest-figures">
+                <div><strong>$25,000</strong>Invested</div>
+                <div><strong>$27,050</strong>Current value</div>
+              </div>
+            </div>
+            <div class="dsh-invest-card">
+              <div class="dsh-invest-top">
+                <div><h4>Sunbelt Industrial Fund II</h4><span class="dsh-invest-type">Fund · Diversified</span></div>
+                <span class="dsh-invest-gain is-up"><i class="fa-solid fa-arrow-up"></i> 5.1%</span>
+              </div>
+              <div class="dsh-invest-figures">
+                <div><strong>$15,000</strong>Invested</div>
+                <div><strong>$15,765</strong>Current value</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      </section>
+
+      <!-- ============ MY INVESTMENTS — full grid, filterable, with transactions ============ -->
+      <section class="dsh-view" data-view="investments">
+        <div class="dsh-view-head">
+          <h1>My Investments</h1>
+          <p>Every position you hold, and every transaction behind it.</p>
+        </div>
+
+        <div class="dsh-mini-stats">
+          <div class="dsh-mini-stat"><strong>$128K</strong><span>Portfolio value</span></div>
+          <div class="dsh-mini-stat"><strong>+6.4%</strong><span>Blended return</span></div>
+          <div class="dsh-mini-stat"><strong>6</strong><span>Active positions</span></div>
+          <div class="dsh-mini-stat"><strong>$2,140</strong><span>Next payout, Mar 15</span></div>
+        </div>
+
+        <div class="dsh-pill-filters" id="dshInvestFilters">
+          <button class="dsh-pill is-active" data-invest-filter="all">All</button>
+          <button class="dsh-pill" data-invest-filter="multifamily">Multifamily</button>
+          <button class="dsh-pill" data-invest-filter="fund">Funds</button>
+          <button class="dsh-pill" data-invest-filter="land">Land banking</button>
+          <button class="dsh-pill" data-invest-filter="commercial">Commercial</button>
+        </div>
+
+        <div class="dsh-invest-grid" id="dshInvestGrid"><!-- rendered dynamically by script.js --></div>
+
+        <div class="dsh-panel" style="margin-top:24px;">
+          <div class="dsh-panel-head"><h2>Recent transactions</h2></div>
+          <div class="dsh-table-wrap">
+            <table class="dsh-table">
+              <thead><tr><th>Date</th><th>Description</th><th>Amount</th><th>Status</th></tr></thead>
+              <tbody>
+                <tr><td>Mar 2</td><td>Payout — Cedar Row Apartments</td><td>+$2,140</td><td><span class="dsh-status is-active">Completed</span></td></tr>
+                <tr><td>Feb 18</td><td>Allocation — Sunbelt Industrial Fund II</td><td>−$15,000</td><td><span class="dsh-status is-active">Completed</span></td></tr>
+                <tr><td>Feb 4</td><td>Payout — 301 Congress Land Parcel</td><td>+$240</td><td><span class="dsh-status is-active">Completed</span></td></tr>
+                <tr><td>Jan 22</td><td>Payout — Coimbatore Retail Center</td><td>+$180</td><td><span class="dsh-status is-pending">Processing</span></td></tr>
+                <tr><td>Jan 9</td><td>Allocation — 555 California Street Office</td><td>−$18,000</td><td><span class="dsh-status is-active">Completed</span></td></tr>
+                <tr><td>Dec 20</td><td>Payout — Cedar Row Apartments</td><td>+$1,980</td><td><span class="dsh-status is-active">Completed</span></td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ MESSAGES — full two-pane inbox ============ -->
+      <section class="dsh-view" data-view="messages">
+        <div class="dsh-view-head">
+          <h1>Messages <span class="dsh-badge" id="dshFullMailBadge">0</span></h1>
+          <p>Notes, statements and replies from the Stackly team, in one inbox.</p>
+        </div>
+
+        <div class="dsh-mail-shell" id="dshFullMailShell">
+          <div class="dsh-mail-shell-list">
+            <div class="dsh-mail-shell-toolbar">
+              <div class="dsh-search-inline"><i class="fa-solid fa-magnifying-glass"></i><input type="text" id="dshFullMailSearch" placeholder="Search messages…"></div>
+              <div class="dsh-mail-tabs" id="dshFullMailTabs">
+                <button class="dsh-mail-tab is-active" data-filter="all">All</button>
+                <button class="dsh-mail-tab" data-filter="unread">Unread</button>
+              </div>
+            </div>
+            <div class="dsh-mail-list dsh-mail-list--full" id="dshFullMailList"><!-- rendered dynamically by script.js --></div>
+          </div>
+          <div class="dsh-mail-detail" id="dshMailDetail">
+            <div class="dsh-mail-detail-empty"><i class="fa-regular fa-envelope-open"></i><p>Select a message to read it here.</p></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ DOCUMENTS — dynamic, filterable by category ============ -->
+      <section class="dsh-view" data-view="documents">
+        <div class="dsh-view-head">
+          <h1>Documents</h1>
+          <p>Tax forms, statements and agreements — all in one place.</p>
+        </div>
+
+        <div class="dsh-pill-filters" id="dshDocFilters">
+          <button class="dsh-pill is-active" data-doc-filter="all">All</button>
+          <button class="dsh-pill" data-doc-filter="tax">Tax</button>
+          <button class="dsh-pill" data-doc-filter="report">Reports</button>
+          <button class="dsh-pill" data-doc-filter="legal">Legal</button>
+        </div>
+
+        <div class="dsh-panel">
+          <div class="dsh-doc-list" id="dshDocList"><!-- rendered dynamically by script.js --></div>
+        </div>
+      </section>
+
+      <!-- ============ SETTINGS — profile, notifications, security ============ -->
+      <section class="dsh-view" data-view="settings">
+        <div class="dsh-view-head">
+          <h1>Settings</h1>
+          <p>Manage your profile, notifications and account security.</p>
+        </div>
+
+        <form class="dsh-settings-grid" id="dshSettingsForm">
+          <div class="dsh-panel dsh-settings-panel">
+            <div class="dsh-panel-head"><h2>Profile</h2></div>
+            <div class="dsh-panel-body">
+              <div class="au-field"><input id="dshSettingsName" type="text" placeholder=" "><label for="dshSettingsName">Full name</label></div>
+              <div class="au-field"><input id="dshSettingsEmail" type="email" placeholder=" "><label for="dshSettingsEmail">Email address</label></div>
+              <div class="au-field"><input id="dshSettingsPhone" type="tel" placeholder=" "><label for="dshSettingsPhone">Phone number</label></div>
+            </div>
+          </div>
+
+          <div class="dsh-settings-side">
+            <div class="dsh-panel dsh-settings-panel">
+              <div class="dsh-panel-head"><h2>Notifications</h2></div>
+              <div class="dsh-panel-body dsh-toggle-list">
+                <label class="dsh-toggle"><input type="checkbox" checked><span class="dsh-toggle-track"></span> Payout confirmations</label>
+                <label class="dsh-toggle"><input type="checkbox" checked><span class="dsh-toggle-track"></span> New Journal notes</label>
+                <label class="dsh-toggle"><input type="checkbox"><span class="dsh-toggle-track"></span> Weekly summary email</label>
+                <label class="dsh-toggle"><input type="checkbox"><span class="dsh-toggle-track"></span> SMS alerts</label>
+              </div>
+            </div>
+
+            <div class="dsh-panel dsh-settings-panel">
+              <div class="dsh-panel-head"><h2>Security</h2></div>
+              <div class="dsh-panel-body">
+                <div class="au-field"><input type="password" placeholder=" "><label>New password</label></div>
+                <button type="button" class="dsh-ghost-btn" id="dshLogoutAllBtn"><i class="fa-solid fa-lock"></i> Log out of all devices</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="dsh-settings-save">
+            <button type="submit" class="dsh-save-btn">Save changes</button>
+            <span class="dsh-saved-note" id="dshSettingsSaved"><i class="fa-solid fa-check"></i> Saved</span>
+          </div>
+        </form>
+      </section>
+
+    </div>
+  </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>

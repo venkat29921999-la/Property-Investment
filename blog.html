@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Journal — Stackly Property Investment</title>
+<meta name="description" content="Underwriting notes, market reads and portfolio lessons from Stackly — field notes from seventeen years of disciplined, owner-operator property investing.">
+
+<!-- Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+<!-- Font Awesome (icons only, per brief) -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+<!-- AOS (scroll reveal) -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ============ CUSTOM CURSOR (desktop) ============ -->
+<div class="cursor-dot" aria-hidden="true"></div>
+<div class="cursor-ring" aria-hidden="true"></div>
+
+<!-- ============ PRELOADER ============ -->
+<div class="preloader" id="preloader" aria-hidden="true">
+  <svg class="preloader-mark" viewBox="0 0 60 60" fill="none">
+    <circle cx="30" cy="30" r="26" stroke="currentColor" stroke-width="1.2"/>
+    <path class="preloader-line" d="M8 30 A22 22 0 0 1 52 30" stroke="currentColor" stroke-width="1.2"/>
+  </svg>
+</div>
+
+<!-- ============ HEADER (identical to index.html) ============ -->
+<header class="site-header" id="siteHeader">
+  <div class="header-inner">
+
+    <a href="index.html" class="brand" aria-label="Stackly — home">
+      <span class="brand-mark-img" role="img" aria-label="Stackly logo"></span>
+    </a>
+
+    <nav class="nav-group nav-main" aria-label="Primary">
+      <a href="index.html" class="nav-link">Home</a>
+      <a href="about.html" class="nav-link">About</a>
+      <a href="services.html" class="nav-link">Services</a>
+      <a href="blog.html" class="nav-link is-active">Blog</a>
+      <a href="contact.html" class="nav-link">Contact</a>
+    </nav>
+
+    <a href="login.html" class="btn-login"><i class="fa-solid fa-user"></i><span>Log in</span></a>
+
+    <button class="hamburger" id="hamburgerBtn" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<!-- ============ MOBILE MENU (identical to index.html) ============ -->
+<div class="mobile-menu" id="mobileMenu">
+  <nav aria-label="Mobile primary">
+    <a href="index.html" class="mobile-link"><span>01</span>Home</a>
+    <a href="about.html" class="mobile-link"><span>02</span>About</a>
+    <a href="services.html" class="mobile-link"><span>03</span>Services</a>
+    <a href="blog.html" class="mobile-link"><span>04</span>Blog</a>
+    <a href="contact.html" class="mobile-link"><span>05</span>Contact</a>
+  </nav>
+  <a href="login.html" class="btn-outline mobile-login"><i class="fa-solid fa-user"></i> Log in</a>
+  <div class="mobile-menu-foot">
+    <div class="mobile-socials">
+      <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+      <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+      <a href="#" aria-label="X"><i class="fa-brands fa-x-twitter"></i></a>
+    </div>
+    <p>+1 (415) 555‑0148</p>
+  </div>
+</div>
+<div class="mobile-menu-backdrop" id="mobileBackdrop"></div>
+
+<main id="blog-top">
+
+  <!-- ============ 1. BLOG HERO — rotating-word headline, drifting blob field, circular photo-mask reveal ============ -->
+  <section class="bl-hero" id="blogHero">
+    <div class="bl-hero-blob bl-hero-blob-a" aria-hidden="true"></div>
+    <div class="bl-hero-blob bl-hero-blob-b" aria-hidden="true"></div>
+
+    <div class="section-inner bl-hero-inner">
+
+      <div class="bl-hero-copy">
+        <p class="section-label">The Stackly Journal</p>
+        <h1 class="bl-hero-title">Field notes on <span class="bl-rotate" id="blRotate"><span class="bl-rotate-word is-active">patient capital</span><span class="bl-rotate-word">long‑hold assets</span><span class="bl-rotate-word">disciplined returns</span></span></h1>
+        <p class="lead-p">Underwriting notes, market reads and portfolio lessons from seventeen years of buying fewer buildings and holding them longer.</p>
+
+        <div class="bl-hero-badges" id="blHeroBadges">
+          <a href="404.html" class="bl-badge-chip"><i class="fa-solid fa-chart-line"></i>Market outlook</a>
+          <a href="404.html" class="bl-badge-chip"><i class="fa-solid fa-building"></i>Underwriting</a>
+          <a href="404.html" class="bl-badge-chip"><i class="fa-solid fa-leaf"></i>Sustainability</a>
+        </div>
+      </div>
+
+      <div class="bl-hero-visual">
+        <div class="bl-hero-photo-mask" id="blHeroPhoto">
+          <img src="assets/pv21.webp" alt="Skyscraper representative of Stackly's long-hold commercial coverage" loading="eager">
+        </div>
+        <div class="bl-hero-stat-float">
+          <strong>140+</strong><span>Notes published</span>
+        </div>
+      </div>
+
+    </div>
+
+    <a href="#featured" class="bl-hero-scroll" aria-label="Scroll to featured article"><span></span></a>
+  </section>
+
+  <!-- ============ 2. FEATURED ARTICLE — diagonal clip-path reveal + ripple CTA ============ -->
+  <section class="bl-featured" id="featured">
+    <div class="section-inner">
+      <p class="section-label section-label--light">Editor's pick</p>
+      <h2 class="section-title section-title--light">Start here.</h2>
+
+      <article class="bl-feat-card">
+        <div class="bl-feat-media" data-bl-inview>
+          <img src="assets/pv17.webp" alt="Glass office tower representing the multifamily and commercial thesis in the featured note" loading="lazy">
+          <span class="bl-feat-tag">Market outlook</span>
+        </div>
+        <div class="bl-feat-copy">
+          <div class="bl-feat-meta">
+            <span><i class="fa-regular fa-clock"></i> 9 min read</span>
+            <span><i class="fa-regular fa-calendar"></i> March 2026</span>
+          </div>
+          <h3>Why we're long on Sunbelt multifamily through the next cycle</h3>
+          <p>Migration data, permitting friction and replacement cost all point the same direction. Here's the underwriting behind our largest single-sector position, and where it could go wrong.</p>
+          <a href="404.html" class="bl-feat-btn"><span>Read the note</span><i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- ============ 3. LATEST INSIGHTS — sliding pill filter + tilting card grid ============ -->
+  <section class="bl-grid-section" id="insights">
+    <div class="section-inner">
+      <p class="section-label">Latest insights</p>
+      <h2 class="section-title">Browse by topic.</h2>
+
+      <div class="bl-filter-bar" id="blFilterBar">
+        <button class="bl-filter-btn is-active" data-filter="all">All</button>
+        <button class="bl-filter-btn" data-filter="market">Market outlook</button>
+        <button class="bl-filter-btn" data-filter="guide">Investor guide</button>
+        <button class="bl-filter-btn" data-filter="underwriting">Underwriting</button>
+        <button class="bl-filter-btn" data-filter="case">Case study</button>
+        <button class="bl-filter-btn" data-filter="regulatory">Regulatory</button>
+        <button class="bl-filter-btn" data-filter="strategy">Strategy</button>
+        <button class="bl-filter-btn" data-filter="sustainability">Sustainability</button>
+        <span class="bl-filter-indicator" id="blFilterIndicator"></span>
+      </div>
+
+      <div class="bl-grid" id="blGrid">
+
+        <article class="bl-card" data-cat="market">
+          <a href="404.html" class="bl-card-media">
+            <img src="assets/pv13.webp" alt="Investment committee reviewing a market thesis" loading="lazy">
+          </a>
+          <div class="bl-card-body">
+            <span class="bl-card-tag">Market outlook</span>
+            <h3><a href="404.html">Why secondary metros are re‑rating faster than the coasts</a></h3>
+            <p>A look at the migration and cap‑rate data behind our 2026 acquisition thesis.</p>
+            <div class="bl-card-meta"><span class="bl-card-avatar">EF</span>6 min read · Feb 2026</div>
+          </div>
+        </article>
+
+        <article class="bl-card" data-cat="guide">
+          <a href="404.html" class="bl-card-media">
+            <img src="assets/pv14.webp" alt="Analysts discussing a deal at a wooden table" loading="lazy">
+          </a>
+          <div class="bl-card-body">
+            <span class="bl-card-tag">Investor guide</span>
+            <h3><a href="404.html">1031 exchanges, explained without the jargon</a></h3>
+            <p>What actually qualifies, the deadlines that matter, and where investors lose money.</p>
+            <div class="bl-card-meta"><span class="bl-card-avatar">PN</span>8 min read · Jan 2026</div>
+          </div>
+        </article>
+
+        <article class="bl-card" data-cat="underwriting">
+          <a href="404.html" class="bl-card-media">
+            <img src="assets/pv15.webp" alt="Team reviewing property documents" loading="lazy">
+          </a>
+          <div class="bl-card-body">
+            <span class="bl-card-tag">Underwriting</span>
+            <h3><a href="404.html">The five numbers we won't close a deal without</a></h3>
+            <p>Inside the underwriting checklist our acquisitions team runs on every property.</p>
+            <div class="bl-card-meta"><span class="bl-card-avatar">MW</span>5 min read · Dec 2025</div>
+          </div>
+        </article>
+
+        <article class="bl-card" data-cat="case">
+          <a href="404.html" class="bl-card-media">
+            <img src="assets/pv20.webp" alt="Team meeting during a value-add repositioning project" loading="lazy">
+          </a>
+          <div class="bl-card-body">
+            <span class="bl-card-tag">Case study</span>
+            <h3><a href="404.html">Inside a value‑add reposition: Cedar Row Apartments</a></h3>
+            <p>Budget, timeline and the leasing curve from a 34‑day-vacancy purchase to stabilization.</p>
+            <div class="bl-card-meta"><span class="bl-card-avatar">DO</span>7 min read · Nov 2025</div>
+          </div>
+        </article>
+
+        <article class="bl-card" data-cat="regulatory">
+          <a href="404.html" class="bl-card-media">
+            <img src="assets/pv32.webp" alt="Close-up of a policy and compliance document on screen" loading="lazy">
+          </a>
+          <div class="bl-card-body">
+            <span class="bl-card-tag">Regulatory</span>
+            <h3><a href="404.html">Rent stabilization rules are shifting — what owners should watch</a></h3>
+            <p>A market-by-market read on where policy is moving and how we're underwriting around it.</p>
+            <div class="bl-card-meta"><span class="bl-card-avatar">PN</span>6 min read · Oct 2025</div>
+          </div>
+        </article>
+
+        <article class="bl-card" data-cat="strategy">
+          <a href="404.html" class="bl-card-media">
+            <img src="assets/pv6.webp" alt="Glass building facade representing a concentrated portfolio strategy" loading="lazy">
+          </a>
+          <div class="bl-card-body">
+            <span class="bl-card-tag">Strategy</span>
+            <h3><a href="404.html">The case for buying fewer, better assets</a></h3>
+            <p>Why concentration, done carefully, has outperformed diversification in our own numbers.</p>
+            <div class="bl-card-meta"><span class="bl-card-avatar">EF</span>5 min read · Sep 2025</div>
+          </div>
+        </article>
+
+        <article class="bl-card" data-cat="sustainability">
+          <a href="404.html" class="bl-card-media">
+            <img src="assets/pv29.webp" alt="Office common area built for lower energy retrofit" loading="lazy">
+          </a>
+          <div class="bl-card-body">
+            <span class="bl-card-tag">Sustainability</span>
+            <h3><a href="404.html">Retrofitting for resilience: what pencils and what doesn't</a></h3>
+            <p>The efficiency upgrades that paid for themselves inside three years — and the ones that didn't.</p>
+            <div class="bl-card-meta"><span class="bl-card-avatar">DO</span>7 min read · Aug 2025</div>
+          </div>
+        </article>
+
+        <article class="bl-card" data-cat="market">
+          <a href="404.html" class="bl-card-media">
+            <img src="assets/pv4.webp" alt="Commercial property exterior tied to cap rate compression note" loading="lazy">
+          </a>
+          <div class="bl-card-body">
+            <span class="bl-card-tag">Market outlook</span>
+            <h3><a href="404.html">Cap rates are compressing again — here's where</a></h3>
+            <p>Reading absorption and financing-cost data like an operator, not a headline.</p>
+            <div class="bl-card-meta"><span class="bl-card-avatar">MW</span>6 min read · Jul 2025</div>
+          </div>
+        </article>
+
+      </div>
+
+      <p class="bl-grid-empty" id="blGridEmpty">No notes in this topic yet — check back soon.</p>
+    </div>
+  </section>
+
+  <!-- ============ 4. MEET THE WRITERS — swipeable stacked card deck ============ -->
+  <section class="bl-authors" id="authors">
+    <div class="section-inner">
+      <p class="section-label section-label--light">Who's writing this</p>
+      <h2 class="section-title section-title--light">Four voices, one underwriting standard.</h2>
+
+      <div class="bl-author-deck" id="blAuthorDeck">
+
+        <article class="bl-author-card" data-author="0">
+          <div class="bl-author-media"><img src="assets/pv23.webp" alt="Portrait of Elena Ford, Managing Principal" draggable="false"></div>
+          <div class="bl-author-info">
+            <h3>Elena Ford</h3>
+            <span>Managing Principal</span>
+            <p>"We buy fewer buildings so we can know every one of them cold."</p>
+            <div class="bl-author-meta"><i class="fa-solid fa-pen-nib"></i> 38 notes published</div>
+          </div>
+        </article>
+
+        <article class="bl-author-card" data-author="1">
+          <div class="bl-author-media"><img src="assets/pv24.webp" alt="Portrait of Marcus Whitfield, Head of Acquisitions" draggable="false"></div>
+          <div class="bl-author-info">
+            <h3>Marcus Whitfield</h3>
+            <span>Head of Acquisitions</span>
+            <p>"Every note starts as a rejected deal memo — the ones that taught us something."</p>
+            <div class="bl-author-meta"><i class="fa-solid fa-pen-nib"></i> 27 notes published</div>
+          </div>
+        </article>
+
+        <article class="bl-author-card" data-author="2">
+          <div class="bl-author-media"><img src="assets/pv25.webp" alt="Portrait of Priya Natarajan, Chief Financial Officer" draggable="false"></div>
+          <div class="bl-author-info">
+            <h3>Priya Natarajan</h3>
+            <span>Chief Financial Officer</span>
+            <p>"If a structure needs a footnote to explain the fee, we don't use the structure."</p>
+            <div class="bl-author-meta"><i class="fa-solid fa-pen-nib"></i> 22 notes published</div>
+          </div>
+        </article>
+
+        <article class="bl-author-card" data-author="3">
+          <div class="bl-author-media"><img src="assets/pv26.webp" alt="Portrait of David Osei, Head of Asset Management" draggable="false"></div>
+          <div class="bl-author-info">
+            <h3>David Osei</h3>
+            <span>Head of Asset Management</span>
+            <p>"The best case studies are the ones where the first plan didn't work."</p>
+            <div class="bl-author-meta"><i class="fa-solid fa-pen-nib"></i> 19 notes published</div>
+          </div>
+        </article>
+
+      </div>
+
+      <div class="bl-author-controls">
+        <button class="bl-author-btn" id="blAuthorPrev" aria-label="Previous writer"><i class="fa-solid fa-arrow-left"></i></button>
+        <div class="bl-author-dots" id="blAuthorDots"></div>
+        <button class="bl-author-btn" id="blAuthorNext" aria-label="Next writer"><i class="fa-solid fa-arrow-right"></i></button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 5. TOPIC CLOUD — floating bubbles, idle drift + magnetic hover ============ -->
+  <section class="bl-topics" id="topics">
+    <div class="section-inner">
+      <p class="section-label">Explore by topic</p>
+      <h2 class="section-title">Seventeen years of notes, sorted.</h2>
+
+      <div class="bl-topic-cloud" id="blTopicCloud">
+        <a href="404.html" class="bl-topic-bubble bl-topic-bubble--lg" style="--i:0">Multifamily</a>
+        <a href="404.html" class="bl-topic-bubble" style="--i:1">Market cycles</a>
+        <a href="404.html" class="bl-topic-bubble bl-topic-bubble--sm" style="--i:2">1031 exchange</a>
+        <a href="404.html" class="bl-topic-bubble bl-topic-bubble--lg" style="--i:3">Underwriting</a>
+        <a href="404.html" class="bl-topic-bubble bl-topic-bubble--sm" style="--i:4">Land banking</a>
+        <a href="404.html" class="bl-topic-bubble" style="--i:5">REIT structures</a>
+        <a href="404.html" class="bl-topic-bubble bl-topic-bubble--sm" style="--i:6">Sustainability</a>
+        <a href="404.html" class="bl-topic-bubble bl-topic-bubble--lg" style="--i:7">Regulatory</a>
+        <a href="404.html" class="bl-topic-bubble" style="--i:8">Portfolio strategy</a>
+        <a href="404.html" class="bl-topic-bubble bl-topic-bubble--sm" style="--i:9">Commercial</a>
+        <a href="404.html" class="bl-topic-bubble" style="--i:10">Case studies</a>
+        <a href="404.html" class="bl-topic-bubble bl-topic-bubble--sm" style="--i:11">Investor guides</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 6. FROM THE ARCHIVE — alternating rows, side-reveal + load more ============ -->
+  <section class="bl-archive" id="archive">
+    <div class="section-inner">
+      <p class="section-label section-label--light">From the archive</p>
+      <h2 class="section-title section-title--light">Older, still relevant.</h2>
+
+      <div class="bl-archive-list" id="blArchiveList">
+
+        <article class="bl-archive-row" data-bl-inview>
+          <div class="bl-archive-media"><img src="assets/pv22.webp" alt="Building facade representing a land banking strategy note" loading="lazy"></div>
+          <div class="bl-archive-copy"><span class="bl-archive-year">2024</span><h3>Land banking 101: patience as a strategy</h3><p>Why we hold raw and entitled land for years before a single permit is pulled.</p><a href="404.html">Read note <i class="fa-solid fa-arrow-right"></i></a></div>
+        </article>
+
+        <article class="bl-archive-row" data-bl-inview>
+          <div class="bl-archive-media"><img src="assets/pv18.webp" alt="Stairwell representing a note on lease renewal cycles" loading="lazy"></div>
+          <div class="bl-archive-copy"><span class="bl-archive-year">2024</span><h3>What a full rent cycle taught us about renewals</h3><p>Three years of renewal data across the portfolio, and what it changed in our leasing playbook.</p><a href="404.html">Read note <i class="fa-solid fa-arrow-right"></i></a></div>
+        </article>
+
+        <article class="bl-archive-row" data-bl-inview>
+          <div class="bl-archive-media"><img src="assets/pv15.webp" alt="Building exterior representing a REIT structure retrospective" loading="lazy"></div>
+          <div class="bl-archive-copy"><span class="bl-archive-year">2023</span><h3>Our first REIT structure, five years later</h3><p>What we'd repeat, what we'd change, and why the fee stack stayed simple.</p><a href="404.html">Read note <i class="fa-solid fa-arrow-right"></i></a></div>
+        </article>
+
+        <article class="bl-archive-row" data-bl-inview>
+          <div class="bl-archive-media"><img src="assets/pv1.webp" alt="City building representing metro market selection note" loading="lazy"></div>
+          <div class="bl-archive-copy"><span class="bl-archive-year">2023</span><h3>Twelve metro markets: how we chose them</h3><p>The population, permitting and liquidity filters behind every market we've entered.</p><a href="404.html">Read note <i class="fa-solid fa-arrow-right"></i></a></div>
+        </article>
+
+        <article class="bl-archive-row bl-archive-row--more" data-bl-inview>
+          <div class="bl-archive-media"><img src="assets/pv31.webp" alt="Meeting room representing a note on the 2022 rate shock" loading="lazy"></div>
+          <div class="bl-archive-copy"><span class="bl-archive-year">2022</span><h3>The 2022 rate shock: what we changed</h3><p>How financing costs reshaped our acquisition pace — and which deals we walked away from.</p><a href="404.html">Read note <i class="fa-solid fa-arrow-right"></i></a></div>
+        </article>
+
+        <article class="bl-archive-row bl-archive-row--more" data-bl-inview>
+          <div class="bl-archive-media"><img src="assets/pv10.webp" alt="Property representing an early founding-era note" loading="lazy"></div>
+          <div class="bl-archive-copy"><span class="bl-archive-year">2022</span><h3>Why we still underwrite land like it's 2009</h3><p>The recession-era habits we never dropped, even as the market recovered around us.</p><a href="404.html">Read note <i class="fa-solid fa-arrow-right"></i></a></div>
+        </article>
+
+        <article class="bl-archive-row bl-archive-row--more" data-bl-inview>
+          <div class="bl-archive-media"><img src="assets/pv11.webp" alt="Keys representing the founding thesis note" loading="lazy"></div>
+          <div class="bl-archive-copy"><span class="bl-archive-year">2021</span><h3>Founding thesis: buy fewer, hold longer</h3><p>The original memo that still governs every acquisition committee meeting today.</p><a href="404.html">Read note <i class="fa-solid fa-arrow-right"></i></a></div>
+        </article>
+
+      </div>
+
+      <button class="bl-load-more" id="blLoadMore" aria-expanded="false" aria-controls="blArchiveList">
+        <span class="bl-load-more-text">Load more notes</span>
+        <span class="bl-load-more-icon"><i class="fa-solid fa-plus"></i></span>
+      </button>
+    </div>
+  </section>
+
+  <!-- ============ 7. WEEKLY DIGEST — paper-plane submit animation, floating preview cards ============ -->
+  <section class="bl-digest" id="digest">
+    <div class="section-inner bl-digest-inner">
+
+      <div class="bl-digest-copy">
+        <p class="section-label">Weekly digest</p>
+        <h2 class="section-title">One email, every Friday.</h2>
+        <p class="lead-p">The three notes worth your five minutes — no drip campaign, unsubscribe anytime.</p>
+
+        <form class="bl-digest-form" id="blDigestForm">
+          <input type="email" required placeholder="you@email.com" aria-label="Email address" id="blDigestInput">
+          <button type="submit" id="blDigestBtn" aria-label="Subscribe">
+            <span class="bl-digest-btn-text">Subscribe</span>
+            <svg class="bl-plane" id="blPlane" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <path d="M2 12L21 3L14.5 21L11 13L2 12Z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round"/>
+              <path d="M11 13L16 8" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+            </svg>
+          </button>
+        </form>
+        <p class="bl-digest-success" id="blDigestSuccess" role="status" aria-live="polite">You're on the list — the first note lands Friday.</p>
+      </div>
+
+      <div class="bl-digest-visual" aria-hidden="true">
+        <div class="bl-digest-card bl-digest-card-1"><i class="fa-solid fa-envelope"></i><span>Market outlook · Feb</span></div>
+        <div class="bl-digest-card bl-digest-card-2"><i class="fa-solid fa-chart-line"></i><span>Underwriting · Jan</span></div>
+        <div class="bl-digest-card bl-digest-card-3"><i class="fa-solid fa-building-columns"></i><span>Case study · Dec</span></div>
+      </div>
+
+    </div>
+  </section>
+
+</main>
+
+<!-- ============ FOOTER (identical to index.html) ============ -->
+<footer class="site-footer">
+  <div class="section-inner footer-grid">
+    <div class="footer-brand">
+      <a href="index.html" class="brand brand--footer">
+        <span class="brand-mark-img brand-mark-img--footer" role="img" aria-label="Stackly logo"></span>
+      </a>
+      <p>Real assets, precisely placed. Registered investment adviser, member of the National Real Estate Investment Association.</p>
+    </div>
+
+    <div class="footer-col">
+      <h4>Navigate</h4>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="index.html#services">Services</a>
+      <a href="index.html#portfolio">Portfolio</a>
+      <a href="blog.html">Blog</a>
+      <a href="index.html#contact">Contact</a>
+    </div>
+
+    <div class="footer-col">
+      <h4>Services</h4>
+      <a href="index.html#services">Residential portfolios</a>
+      <a href="index.html#services">Commercial acquisitions</a>
+      <a href="index.html#services">REIT &amp; fund structures</a>
+      <a href="index.html#services">Land banking</a>
+      <a href="index.html#services">Advisory &amp; 1031 exchange</a>
+    </div>
+
+    <div class="footer-col footer-col--newsletter">
+      <h4>Market notes, monthly</h4>
+      <p>One email a month — no noise, no drip campaign.</p>
+      <form class="newsletter-form" id="newsletterForm">
+        <input type="email" required placeholder="you@email.com" aria-label="Email address">
+        <button type="submit" aria-label="Subscribe"><i class="fa-solid fa-arrow-right"></i></button>
+      </form>
+      <div class="footer-socials">
+        <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+        <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+        <a href="#" aria-label="X"><i class="fa-brands fa-x-twitter"></i></a>
+        <a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-bottom section-inner">
+    <p>© <span id="year"></span> Stackly Property Investment. All rights reserved.</p>
+    <div class="footer-legal">
+      <a href="#">Privacy policy</a>
+      <a href="#">Terms</a>
+      <a href="#">Risk disclosures</a>
+    </div>
+  </div>
+</footer>
+
+<button class="back-to-top" id="backToTop" aria-label="Back to top"><i class="fa-solid fa-arrow-up"></i></button>
+
+<!-- Scripts -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+<script src="script.js"></script>
+</body>
+</html>

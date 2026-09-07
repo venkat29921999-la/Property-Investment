@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Admin Dashboard — Stackly Property Investment</title>
+<meta name="description" content="Stackly admin dashboard — users, listings, messages, and platform activity.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link rel="stylesheet" href="style.css">
+</head>
+<body class="dsh-body" data-role="admin">
+
+<div class="cursor-dot" aria-hidden="true"></div>
+<div class="cursor-ring" aria-hidden="true"></div>
+
+<div class="preloader" id="preloader" aria-hidden="true">
+  <svg class="preloader-mark" viewBox="0 0 60 60" fill="none">
+    <circle cx="30" cy="30" r="26" stroke="currentColor" stroke-width="1.2"/>
+    <path class="preloader-line" d="M8 30 A22 22 0 0 1 52 30" stroke="currentColor" stroke-width="1.2"/>
+  </svg>
+</div>
+
+<div class="dsh-shell">
+
+  <aside class="dsh-sidebar" id="dshSidebar">
+    <div class="dsh-sidebar-brand">
+      <span class="brand-mark-img" role="img" aria-label="Stackly logo"></span>
+    </div>
+    <nav class="dsh-nav">
+      <a href="#overview" class="dsh-nav-link is-active" data-view="overview"><i class="fa-solid fa-table-cells-large"></i> Overview</a>
+      <a href="#users" class="dsh-nav-link" data-view="users"><i class="fa-solid fa-users"></i> Users</a>
+      <a href="#listings" class="dsh-nav-link" data-view="listings"><i class="fa-solid fa-building"></i> Listings</a>
+      <a href="#messages" class="dsh-nav-link" data-view="messages"><i class="fa-solid fa-envelope"></i> Messages</a>
+      <a href="#reports" class="dsh-nav-link" data-view="reports"><i class="fa-solid fa-file-lines"></i> Reports</a>
+      <a href="#settings" class="dsh-nav-link" data-view="settings"><i class="fa-solid fa-gear"></i> Settings</a>
+      <div class="dsh-nav-divider"></div>
+    </nav>
+    <button class="dsh-logout" id="dshLogout"><i class="fa-solid fa-arrow-right-from-bracket"></i> Log out</button>
+  </aside>
+
+  <div class="dsh-backdrop" id="dshBackdrop"></div>
+
+  <div class="dsh-main">
+
+    <header class="dsh-topbar">
+      <button class="dsh-hamburger" id="dshHamburger" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <div class="dsh-search">
+        <i class="fa-solid fa-magnifying-glass"></i>
+        <input type="text" placeholder="Search users, listings, messages…">
+      </div>
+      <div class="dsh-topbar-right">
+        <a href="#messages" class="dsh-bell" data-goto-view="messages" aria-label="Messages"><i class="fa-regular fa-bell"></i><span class="dsh-bell-dot"></span></a>
+        <div class="dsh-profile">
+          <span class="dsh-avatar" id="dshAvatar">A</span>
+          <span class="dsh-profile-text"><strong id="dshProfileName">Admin</strong><span>Admin</span></span>
+        </div>
+      </div>
+    </header>
+
+    <div class="dsh-content">
+
+      <!-- ============ OVERVIEW ============ -->
+      <section class="dsh-view is-active" data-view="overview">
+      <div class="dsh-welcome">
+        <h1 id="dshGreeting">Good morning, there 👋</h1>
+        <p>Here's what's happening across Stackly today.</p>
+      </div>
+
+      <div class="dsh-stat-grid">
+        <div class="dsh-stat-card" style="animation-delay:0s">
+          <div class="dsh-stat-top">
+            <span class="dsh-stat-icon"><i class="fa-solid fa-users"></i></span>
+            <span class="dsh-stat-trend is-up"><i class="fa-solid fa-arrow-up"></i> 12%</span>
+          </div>
+          <div class="dsh-stat-value"><span class="fig-num" data-count="2480">0</span><span class="fig-suffix">+</span></div>
+          <div class="dsh-stat-label">Total users</div>
+        </div>
+        <div class="dsh-stat-card" style="animation-delay:0.08s">
+          <div class="dsh-stat-top">
+            <span class="dsh-stat-icon"><i class="fa-solid fa-building"></i></span>
+            <span class="dsh-stat-trend is-up"><i class="fa-solid fa-arrow-up"></i> 6%</span>
+          </div>
+          <div class="dsh-stat-value"><span class="fig-num" data-count="96">0</span></div>
+          <div class="dsh-stat-label">Active listings</div>
+        </div>
+        <div class="dsh-stat-card" style="animation-delay:0.16s">
+          <div class="dsh-stat-top">
+            <span class="dsh-stat-icon"><i class="fa-solid fa-sack-dollar"></i></span>
+            <span class="dsh-stat-trend is-up"><i class="fa-solid fa-arrow-up"></i> 9%</span>
+          </div>
+          <div class="dsh-stat-value">$<span class="fig-num" data-count="482">0</span><span class="fig-suffix">K</span></div>
+          <div class="dsh-stat-label">Monthly revenue</div>
+        </div>
+        <div class="dsh-stat-card" style="animation-delay:0.24s">
+          <div class="dsh-stat-top">
+            <span class="dsh-stat-icon"><i class="fa-solid fa-hourglass-half"></i></span>
+            <span class="dsh-stat-trend is-down"><i class="fa-solid fa-arrow-down"></i> 3%</span>
+          </div>
+          <div class="dsh-stat-value"><span class="fig-num" data-count="14">0</span></div>
+          <div class="dsh-stat-label">Pending approvals</div>
+        </div>
+      </div>
+
+      <div class="dsh-grid-2">
+        <div class="dsh-panel">
+          <div class="dsh-panel-head">
+            <h2>Messages <span class="dsh-badge" id="dshMailBadge">0</span></h2>
+            <div class="dsh-mail-tabs" id="dshMailTabs">
+              <button class="dsh-mail-tab is-active" data-filter="all">All</button>
+              <button class="dsh-mail-tab" data-filter="unread">Unread</button>
+            </div>
+          </div>
+          <div class="dsh-mail-list" id="dshMailList"><!-- rendered dynamically by script.js --></div>
+          <button class="dsh-view-all" data-goto-view="messages">View all messages <i class="fa-solid fa-arrow-right"></i></button>
+        </div>
+
+        <div class="dsh-panel">
+          <div class="dsh-panel-head"><h2>Recent activity</h2></div>
+          <div class="dsh-timeline">
+            <div class="dsh-timeline-item" style="animation-delay:0s"><strong>New user registered</strong><span>Priya Shankar joined as an investor — 12 min ago</span></div>
+            <div class="dsh-timeline-item" style="animation-delay:0.08s"><strong>Listing approved</strong><span>Cedar Row Apartments went live — 1 hour ago</span></div>
+            <div class="dsh-timeline-item" style="animation-delay:0.16s"><strong>Payout processed</strong><span>$128,400 distributed to 46 investors — 3 hours ago</span></div>
+            <div class="dsh-timeline-item" style="animation-delay:0.24s"><strong>Support ticket opened</strong><span>Withdrawal question from R. Kapoor — 5 hours ago</span></div>
+            <div class="dsh-timeline-item" style="animation-delay:0.32s"><strong>Report generated</strong><span>Q1 portfolio summary is ready to send — yesterday</span></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="dsh-panel">
+        <div class="dsh-panel-head">
+          <h2>Recent signups</h2>
+          <button class="dsh-view-all" data-goto-view="users">Manage all users <i class="fa-solid fa-arrow-right"></i></button>
+        </div>
+        <div class="dsh-table-wrap">
+          <table class="dsh-table">
+            <thead>
+              <tr><th>Name</th><th>Email</th><th>Role</th><th>Joined</th><th>Status</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>Priya Shankar</td><td>priya.shankar@example.com</td><td><span class="dsh-role-pill">User</span></td><td>Today</td><td><span class="dsh-status is-pending">Pending</span></td></tr>
+              <tr><td>Arjun Mehta</td><td>arjun.mehta@example.com</td><td><span class="dsh-role-pill">User</span></td><td>Yesterday</td><td><span class="dsh-status is-active">Active</span></td></tr>
+              <tr><td>Fatima Noor</td><td>fatima.noor@example.com</td><td><span class="dsh-role-pill">Admin</span></td><td>2 days ago</td><td><span class="dsh-status is-active">Active</span></td></tr>
+              <tr><td>David Osei</td><td>david.osei@example.com</td><td><span class="dsh-role-pill">User</span></td><td>3 days ago</td><td><span class="dsh-status is-active">Active</span></td></tr>
+              <tr><td>R. Kapoor</td><td>r.kapoor@example.com</td><td><span class="dsh-role-pill">User</span></td><td>5 days ago</td><td><span class="dsh-status is-pending">Pending</span></td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      </section>
+
+      <!-- ============ USERS — full management table, dynamic + searchable ============ -->
+      <section class="dsh-view" data-view="users">
+        <div class="dsh-view-head">
+          <h1>Users</h1>
+          <p>Every account on the platform, searchable by name, email or role.</p>
+        </div>
+
+        <div class="dsh-mini-stats">
+          <div class="dsh-mini-stat"><strong>2,480</strong><span>Total users</span></div>
+          <div class="dsh-mini-stat"><strong>2,301</strong><span>Active</span></div>
+          <div class="dsh-mini-stat"><strong>179</strong><span>Pending</span></div>
+          <div class="dsh-mini-stat"><strong>6</strong><span>Admins</span></div>
+        </div>
+
+        <div class="dsh-toolbar">
+          <div class="dsh-search-inline"><i class="fa-solid fa-magnifying-glass"></i><input type="text" id="dshUserSearch" placeholder="Search users by name or email…"></div>
+          <div class="dsh-pill-filters" id="dshUserFilters">
+            <button class="dsh-pill is-active" data-role-filter="all">All</button>
+            <button class="dsh-pill" data-role-filter="user">Users</button>
+            <button class="dsh-pill" data-role-filter="admin">Admins</button>
+          </div>
+        </div>
+
+        <div class="dsh-panel">
+          <div class="dsh-table-wrap">
+            <table class="dsh-table">
+              <thead><tr><th>Name</th><th>Email</th><th>Role</th><th>Joined</th><th>Status</th><th></th></tr></thead>
+              <tbody id="dshUsersBody"><!-- rendered dynamically by script.js --></tbody>
+            </table>
+          </div>
+          <p class="dsh-empty-note" id="dshUsersEmpty">No users match that search.</p>
+        </div>
+      </section>
+
+      <!-- ============ LISTINGS — dynamic property grid ============ -->
+      <section class="dsh-view" data-view="listings">
+        <div class="dsh-view-head">
+          <h1>Listings</h1>
+          <p>Every property currently on the platform, across every status.</p>
+        </div>
+
+        <div class="dsh-mini-stats">
+          <div class="dsh-mini-stat"><strong>96</strong><span>Active listings</span></div>
+          <div class="dsh-mini-stat"><strong>11</strong><span>Pending review</span></div>
+          <div class="dsh-mini-stat"><strong>7</strong><span>Under contract</span></div>
+          <div class="dsh-mini-stat"><strong>4</strong><span>Sold this quarter</span></div>
+        </div>
+
+        <div class="dsh-pill-filters" id="dshListingFilters">
+          <button class="dsh-pill is-active" data-listing-filter="all">All</button>
+          <button class="dsh-pill" data-listing-filter="active">Active</button>
+          <button class="dsh-pill" data-listing-filter="pending">Pending</button>
+          <button class="dsh-pill" data-listing-filter="sold">Sold</button>
+        </div>
+
+        <div class="dsh-listing-grid" id="dshListingGrid"><!-- rendered dynamically by script.js --></div>
+      </section>
+
+      <!-- ============ MESSAGES — full two-pane inbox ============ -->
+      <section class="dsh-view" data-view="messages">
+        <div class="dsh-view-head">
+          <h1>Messages <span class="dsh-badge" id="dshFullMailBadge">0</span></h1>
+          <p>Every conversation across the platform, in one inbox.</p>
+        </div>
+
+        <div class="dsh-mail-shell" id="dshFullMailShell">
+          <div class="dsh-mail-shell-list">
+            <div class="dsh-mail-shell-toolbar">
+              <div class="dsh-search-inline"><i class="fa-solid fa-magnifying-glass"></i><input type="text" id="dshFullMailSearch" placeholder="Search messages…"></div>
+              <div class="dsh-mail-tabs" id="dshFullMailTabs">
+                <button class="dsh-mail-tab is-active" data-filter="all">All</button>
+                <button class="dsh-mail-tab" data-filter="unread">Unread</button>
+              </div>
+            </div>
+            <div class="dsh-mail-list dsh-mail-list--full" id="dshFullMailList"><!-- rendered dynamically by script.js --></div>
+          </div>
+          <div class="dsh-mail-detail" id="dshMailDetail">
+            <div class="dsh-mail-detail-empty"><i class="fa-regular fa-envelope-open"></i><p>Select a message to read it here.</p></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ REPORTS — animated chart + dynamic report list ============ -->
+      <section class="dsh-view" data-view="reports">
+        <div class="dsh-view-head">
+          <h1>Reports</h1>
+          <p>Platform-wide reports, generated monthly and ready to share.</p>
+        </div>
+
+        <div class="dsh-chart" id="dshReportsChart" aria-hidden="true">
+          <div class="dsh-chart-bar" style="--h:52%" data-val="$318K"><span>Oct</span></div>
+          <div class="dsh-chart-bar" style="--h:61%" data-val="$362K"><span>Nov</span></div>
+          <div class="dsh-chart-bar" style="--h:58%" data-val="$349K"><span>Dec</span></div>
+          <div class="dsh-chart-bar" style="--h:74%" data-val="$421K"><span>Jan</span></div>
+          <div class="dsh-chart-bar" style="--h:80%" data-val="$458K"><span>Feb</span></div>
+          <div class="dsh-chart-bar" style="--h:100%" data-val="$482K"><span>Mar</span></div>
+        </div>
+
+        <div class="dsh-report-list" id="dshReportList"><!-- rendered dynamically by script.js --></div>
+      </section>
+
+      <!-- ============ SETTINGS — profile, notifications, security ============ -->
+      <section class="dsh-view" data-view="settings">
+        <div class="dsh-view-head">
+          <h1>Settings</h1>
+          <p>Manage your profile, notifications and account security.</p>
+        </div>
+
+        <form class="dsh-settings-grid" id="dshSettingsForm">
+          <div class="dsh-panel dsh-settings-panel">
+            <div class="dsh-panel-head"><h2>Profile</h2></div>
+            <div class="dsh-panel-body">
+              <div class="au-field"><input id="dshSettingsName" type="text" placeholder=" "><label for="dshSettingsName">Full name</label></div>
+              <div class="au-field"><input id="dshSettingsEmail" type="email" placeholder=" "><label for="dshSettingsEmail">Email address</label></div>
+              <div class="au-field"><input id="dshSettingsPhone" type="tel" placeholder=" "><label for="dshSettingsPhone">Phone number</label></div>
+            </div>
+          </div>
+
+          <div class="dsh-settings-side">
+            <div class="dsh-panel dsh-settings-panel">
+              <div class="dsh-panel-head"><h2>Notifications</h2></div>
+              <div class="dsh-panel-body dsh-toggle-list">
+                <label class="dsh-toggle"><input type="checkbox" checked><span class="dsh-toggle-track"></span> New user signups</label>
+                <label class="dsh-toggle"><input type="checkbox" checked><span class="dsh-toggle-track"></span> Listing status changes</label>
+                <label class="dsh-toggle"><input type="checkbox"><span class="dsh-toggle-track"></span> Weekly summary email</label>
+                <label class="dsh-toggle"><input type="checkbox"><span class="dsh-toggle-track"></span> SMS alerts</label>
+              </div>
+            </div>
+
+            <div class="dsh-panel dsh-settings-panel">
+              <div class="dsh-panel-head"><h2>Security</h2></div>
+              <div class="dsh-panel-body">
+                <div class="au-field"><input type="password" placeholder=" "><label>New password</label></div>
+                <button type="button" class="dsh-ghost-btn" id="dshLogoutAllBtn"><i class="fa-solid fa-lock"></i> Log out of all devices</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="dsh-settings-save">
+            <button type="submit" class="dsh-save-btn">Save changes</button>
+            <span class="dsh-saved-note" id="dshSettingsSaved"><i class="fa-solid fa-check"></i> Saved</span>
+          </div>
+        </form>
+      </section>
+
+    </div>
+  </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>

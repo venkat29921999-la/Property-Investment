@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About Meridian — Stackly Property Investment</title>
+<meta name="description" content="Meridian is the story behind Stackly: seventeen years of disciplined, owner-operator property investing across residential, commercial and land assets.">
+
+<!-- Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+<!-- Font Awesome (icons only, per brief) -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+<!-- AOS (scroll reveal) -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ============ CUSTOM CURSOR (desktop) ============ -->
+<div class="cursor-dot" aria-hidden="true"></div>
+<div class="cursor-ring" aria-hidden="true"></div>
+
+<!-- ============ PRELOADER ============ -->
+<div class="preloader" id="preloader" aria-hidden="true">
+  <svg class="preloader-mark" viewBox="0 0 60 60" fill="none">
+    <circle cx="30" cy="30" r="26" stroke="currentColor" stroke-width="1.2"/>
+    <path class="preloader-line" d="M8 30 A22 22 0 0 1 52 30" stroke="currentColor" stroke-width="1.2"/>
+  </svg>
+</div>
+
+<!-- ============ HEADER (identical to index.html) ============ -->
+<header class="site-header" id="siteHeader">
+  <div class="header-inner">
+
+    <a href="index.html" class="brand" aria-label="Stackly — home">
+      <span class="brand-mark-img" role="img" aria-label="Stackly logo"></span>
+    </a>
+
+    <nav class="nav-group nav-main" aria-label="Primary">
+      <a href="index.html" class="nav-link">Home</a>
+      <a href="about.html" class="nav-link is-active">About</a>
+      <a href="services.html" class="nav-link">Services</a>
+      <a href="blog.html" class="nav-link">Blog</a>
+      <a href="contact.html" class="nav-link">Contact</a>
+    </nav>
+
+    <a href="login.html" class="btn-login"><i class="fa-solid fa-user"></i><span>Log in</span></a>
+
+    <button class="hamburger" id="hamburgerBtn" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<!-- ============ MOBILE MENU (identical to index.html) ============ -->
+<div class="mobile-menu" id="mobileMenu">
+  <nav aria-label="Mobile primary">
+    <a href="index.html" class="mobile-link"><span>01</span>Home</a>
+    <a href="about.html" class="mobile-link"><span>02</span>About</a>
+    <a href="services.html" class="mobile-link"><span>03</span>Services</a>
+    <a href="blog.html" class="mobile-link"><span>04</span>Blog</a>
+    <a href="contact.html" class="mobile-link"><span>05</span>Contact</a>
+  </nav>
+  <a href="login.html" class="btn-outline mobile-login"><i class="fa-solid fa-user"></i> Log in</a>
+  <div class="mobile-menu-foot">
+    <div class="mobile-socials">
+      <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+      <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+      <a href="#" aria-label="X"><i class="fa-brands fa-x-twitter"></i></a>
+    </div>
+    <p>+1 (415) 555‑0148</p>
+  </div>
+</div>
+<div class="mobile-menu-backdrop" id="mobileBackdrop"></div>
+
+<main id="about-top">
+
+  <!-- ============ 1. ABOUT HERO — word-stagger headline, wipe-in photo stack, floating badge, marquee ribbon ============ -->
+  <section class="ab-hero" id="aboutHero">
+
+    <div class="section-inner ab-hero-inner">
+
+      <div class="ab-hero-copy">
+        <p class="section-label">About Meridian</p>
+        <h1 class="ab-hero-title" id="abHeroTitle">Real estate is patient. So are we.</h1>
+        <p class="lead-p">Meridian is the investment discipline behind Stackly — seventeen years of buying fewer buildings, holding them longer, and putting our own capital beside every partner's.</p>
+        <a href="404.html" class="ab-hero-cta">Read our story <span class="ab-hero-cta-arrow"><i class="fa-solid fa-arrow-down"></i></span></a>
+      </div>
+
+      <div class="ab-hero-visual">
+        <div class="ab-photo-stack">
+          <div class="ab-photo ab-photo-main">
+            <img src="assets/pv17.webp" alt="Modern glass office tower held within Meridian's commercial portfolio" loading="eager">
+          </div>
+          <div class="ab-photo ab-photo-accent">
+            <img src="assets/pv18.webp" alt="Architectural stairwell detail inside a Meridian-managed building" loading="lazy">
+          </div>
+          <div class="ab-float-badge">
+            <i class="fa-solid fa-building-columns"></i>
+            <div><strong>Est. 2008</strong><span>Privately held, investor‑owned</span></div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="ab-hero-marquee" aria-hidden="true">
+      <div class="ab-marquee-track">
+        <span>EST. 2008</span><span>·</span><span>DISCIPLINED CAPITAL</span><span>·</span><span>LONG HOLD</span><span>·</span><span>OWNER‑OPERATOR</span><span>·</span>
+        <span>EST. 2008</span><span>·</span><span>DISCIPLINED CAPITAL</span><span>·</span><span>LONG HOLD</span><span>·</span><span>OWNER‑OPERATOR</span><span>·</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 2. OUR STORY — scroll-drawn timeline ============ -->
+  <section class="ab-story" id="story">
+    <div class="section-inner">
+      <p class="section-label section-label--light">Our story</p>
+      <h2 class="section-title section-title--light">Seventeen years, four inflection points.</h2>
+
+      <div class="ab-timeline" id="abTimeline">
+        <div class="ab-timeline-line"><span class="ab-timeline-progress" id="timelineProgress"></span></div>
+
+        <div class="ab-tl-item" data-ab-inview>
+          <span class="ab-tl-dot"></span>
+          <div class="ab-tl-media"><img src="assets/pv19.webp" alt="Small founding office where Meridian began in 2008" loading="lazy"></div>
+          <div class="ab-tl-copy"><span class="ab-tl-year">2008</span><h3>Founded in Austin</h3><p>Two underwriters and a single duplex — the first hold that set the seventeen‑year standard.</p></div>
+        </div>
+
+        <div class="ab-tl-item" data-ab-inview>
+          <span class="ab-tl-dot"></span>
+          <div class="ab-tl-media"><img src="assets/pv20.webp" alt="Team meeting during Meridian's first commercial acquisition in 2013" loading="lazy"></div>
+          <div class="ab-tl-copy"><span class="ab-tl-year">2013</span><h3>First commercial acquisition</h3><p>An office lease‑up in Denver proved the underwriting model scaled past single‑family.</p></div>
+        </div>
+
+        <div class="ab-tl-item" data-ab-inview>
+          <span class="ab-tl-dot"></span>
+          <div class="ab-tl-media"><img src="assets/pv21.webp" alt="Skyscraper representing Meridian's pooled fund launch in 2018" loading="lazy"></div>
+          <div class="ab-tl-copy"><span class="ab-tl-year">2018</span><h3>First pooled fund</h3><p>Investors could finally access the same holdings without buying a whole property outright.</p></div>
+        </div>
+
+        <div class="ab-tl-item" data-ab-inview>
+          <span class="ab-tl-dot"></span>
+          <div class="ab-tl-media"><img src="assets/pv22.webp" alt="Modern building facade marking Meridian's twelfth metro market in 2024" loading="lazy"></div>
+          <div class="ab-tl-copy"><span class="ab-tl-year">2024</span><h3>Twelfth metro market</h3><p>Land banking positions and in‑house management rounded out a full‑cycle platform.</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 3. VALUES — 3D flip cards ============ -->
+  <section class="ab-values" id="values">
+    <div class="section-inner">
+      <p class="section-label">What we believe</p>
+      <h2 class="section-title">Four principles, non‑negotiable.</h2>
+
+      <div class="ab-flip-grid">
+
+        <div class="ab-flip-card" tabindex="0">
+          <div class="ab-flip-inner">
+            <div class="ab-flip-face ab-flip-front">
+              <i class="fa-solid fa-scale-balanced"></i>
+              <h3>Alignment</h3>
+              <span class="ab-flip-hint">Hover to read <i class="fa-solid fa-arrow-rotate-right"></i></span>
+            </div>
+            <div class="ab-flip-face ab-flip-back">
+              <h3>Alignment</h3>
+              <p>Principals co‑invest in every deal on identical terms — the same risk, the same upside as our partners.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="ab-flip-card" tabindex="0">
+          <div class="ab-flip-inner">
+            <div class="ab-flip-face ab-flip-front">
+              <i class="fa-solid fa-magnifying-glass-dollar"></i>
+              <h3>Patience</h3>
+              <span class="ab-flip-hint">Hover to read <i class="fa-solid fa-arrow-rotate-right"></i></span>
+            </div>
+            <div class="ab-flip-face ab-flip-back">
+              <h3>Patience</h3>
+              <p>We underwrite for a decade of ownership. A cycle we can't hold through is a deal we don't take.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="ab-flip-card" tabindex="0">
+          <div class="ab-flip-inner">
+            <div class="ab-flip-face ab-flip-front">
+              <i class="fa-solid fa-file-invoice-dollar"></i>
+              <h3>Transparency</h3>
+              <span class="ab-flip-hint">Hover to read <i class="fa-solid fa-arrow-rotate-right"></i></span>
+            </div>
+            <div class="ab-flip-face ab-flip-back">
+              <h3>Transparency</h3>
+              <p>One acquisition fee, one management fee. Every inspection and title report is yours to read, unedited.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="ab-flip-card" tabindex="0">
+          <div class="ab-flip-inner">
+            <div class="ab-flip-face ab-flip-front">
+              <i class="fa-solid fa-people-roof"></i>
+              <h3>Ownership</h3>
+              <span class="ab-flip-hint">Hover to read <i class="fa-solid fa-arrow-rotate-right"></i></span>
+            </div>
+            <div class="ab-flip-face ab-flip-back">
+              <h3>Ownership</h3>
+              <p>Leasing and maintenance stay in‑house, so problems get fixed by people who answer to investors directly.</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 4. LEADERSHIP — grayscale-to-colour reveal cards ============ -->
+  <section class="ab-team" id="leadership">
+    <div class="section-inner">
+      <p class="section-label section-label--light">Leadership</p>
+      <h2 class="section-title section-title--light">The people underwriting your capital.</h2>
+
+      <div class="ab-team-grid">
+
+        <article class="ab-team-card" data-ab-inview>
+          <div class="ab-team-media">
+            <img src="assets/pv23.webp" alt="Portrait of Elena Ford, Managing Principal">
+          </div>
+          <div class="ab-team-panel">
+            <h3>Elena Ford</h3>
+            <span>Managing Principal</span>
+            <p>Seventeen years underwriting every asset class in the book, from land to REIT structures.</p>
+            <div class="ab-team-social"><a href="404.html" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a></div>
+          </div>
+        </article>
+
+        <article class="ab-team-card" data-ab-inview>
+          <div class="ab-team-media">
+            <img src="assets/pv24.webp" alt="Portrait of Marcus Whitfield, Head of Acquisitions">
+          </div>
+          <div class="ab-team-panel">
+            <h3>Marcus Whitfield</h3>
+            <span>Head of Acquisitions</span>
+            <p>Leads sourcing and underwriting across all twelve metro markets in the current portfolio.</p>
+            <div class="ab-team-social"><a href="404.html" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a></div>
+          </div>
+        </article>
+
+        <article class="ab-team-card" data-ab-inview>
+          <div class="ab-team-media">
+            <img src="assets/pv25.webp" alt="Portrait of Priya Natarajan, Chief Financial Officer">
+          </div>
+          <div class="ab-team-panel">
+            <h3>Priya Natarajan</h3>
+            <span>Chief Financial Officer</span>
+            <p>Oversees fund structuring, investor reporting and the fee stack that stays deliberately simple.</p>
+            <div class="ab-team-social"><a href="404.html" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a></div>
+          </div>
+        </article>
+
+        <article class="ab-team-card" data-ab-inview>
+          <div class="ab-team-media">
+            <img src="assets/pv26.webp" alt="Portrait of David Osei, Head of Asset Management">
+          </div>
+          <div class="ab-team-panel">
+            <h3>David Osei</h3>
+            <span>Head of Asset Management</span>
+            <p>Runs in‑house leasing and maintenance so portfolio issues get solved, not outsourced.</p>
+            <div class="ab-team-social"><a href="404.html" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a></div>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 5. BY THE NUMBERS — animated ring counters ============ -->
+  <section class="ab-stats" id="stats">
+    <div class="section-inner">
+      <p class="section-label">By the numbers</p>
+      <h2 class="section-title">Discipline, quantified.</h2>
+
+      <div class="ab-ring-grid" id="abRingGrid">
+
+        <div class="ab-ring" data-target="92">
+          <svg viewBox="0 0 120 120" class="ab-ring-svg">
+            <circle class="ab-ring-track" cx="60" cy="60" r="52"></circle>
+            <circle class="ab-ring-bar" cx="60" cy="60" r="52"></circle>
+          </svg>
+          <div class="ab-ring-value"><span class="ab-ring-num">0</span><span class="ab-ring-suf">%</span></div>
+          <p>Investor renewal rate</p>
+        </div>
+
+        <div class="ab-ring" data-target="99">
+          <svg viewBox="0 0 120 120" class="ab-ring-svg">
+            <circle class="ab-ring-track" cx="60" cy="60" r="52"></circle>
+            <circle class="ab-ring-bar" cx="60" cy="60" r="52"></circle>
+          </svg>
+          <div class="ab-ring-value"><span class="ab-ring-num">0</span><span class="ab-ring-suf">%</span></div>
+          <p>On‑time distributions</p>
+        </div>
+
+        <div class="ab-ring" data-target="96">
+          <svg viewBox="0 0 120 120" class="ab-ring-svg">
+            <circle class="ab-ring-track" cx="60" cy="60" r="52"></circle>
+            <circle class="ab-ring-bar" cx="60" cy="60" r="52"></circle>
+          </svg>
+          <div class="ab-ring-value"><span class="ab-ring-num">0</span><span class="ab-ring-suf">%</span></div>
+          <p>Portfolio occupancy</p>
+        </div>
+
+        <div class="ab-ring" data-target="61">
+          <svg viewBox="0 0 120 120" class="ab-ring-svg">
+            <circle class="ab-ring-track" cx="60" cy="60" r="52"></circle>
+            <circle class="ab-ring-bar" cx="60" cy="60" r="52"></circle>
+          </svg>
+          <div class="ab-ring-value"><span class="ab-ring-num">0</span><span class="ab-ring-suf">%</span></div>
+          <p>Investors from referral</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 6. LIFE AT MERIDIAN — magnetic tilt gallery ============ -->
+  <section class="ab-culture" id="culture">
+    <div class="section-inner">
+      <p class="section-label section-label--light">Life at Meridian</p>
+      <h2 class="section-title section-title--light">Small team, long memory.</h2>
+
+      <div class="ab-gallery" id="abGallery">
+        <figure class="ab-gallery-item ab-g-tall"><img src="assets/pv27.webp" alt="Meridian team collaborating around a table" loading="lazy"></figure>
+        <figure class="ab-gallery-item"><img src="assets/pv28.webp" alt="Analyst reviewing acquisition documents" loading="lazy"></figure>
+        <figure class="ab-gallery-item ab-g-wide"><img src="assets/pv29.webp" alt="Meridian office common area" loading="lazy"></figure>
+        <figure class="ab-gallery-item"><img src="assets/pv30.webp" alt="Site visit to a Meridian-held property" loading="lazy"></figure>
+        <figure class="ab-gallery-item ab-g-tall"><img src="assets/pv31.webp" alt="Team discussion in the Meridian meeting room" loading="lazy"></figure>
+        <figure class="ab-gallery-item"><img src="assets/pv32.webp" alt="Close-up of a Meridian underwriting model on screen" loading="lazy"></figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 7. JOIN CTA — parallax with wipe-reveal headline ============ -->
+  <section class="ab-jointcta" id="joinCta">
+    <img class="ab-jointcta-bg" id="abCtaBg" src="assets/pv33.webp" alt="">
+    <div class="ab-jointcta-scrim"></div>
+    <div class="section-inner ab-jointcta-inner">
+      <h2 class="ab-jointcta-title" data-ab-inview>Ready to hold something worth holding?</h2>
+      <p>Talk with our allocations team about the current offering, or explore open roles on the investment side.</p>
+      <div class="ab-jointcta-actions">
+        <a href="404.html" class="btn-solid btn-solid--light">Talk to the team <i class="fa-solid fa-arrow-right-long"></i></a>
+        <a href="404.html" class="btn-ghost">Careers <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- ============ FOOTER (identical to index.html) ============ -->
+<footer class="site-footer">
+  <div class="section-inner footer-grid">
+    <div class="footer-brand">
+      <a href="index.html" class="brand brand--footer">
+        <span class="brand-mark-img brand-mark-img--footer" role="img" aria-label="Stackly logo"></span>
+      </a>
+      <p>Real assets, precisely placed. Registered investment adviser, member of the National Real Estate Investment Association.</p>
+    </div>
+
+    <div class="footer-col">
+      <h4>Navigate</h4>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="services.html">Services</a>
+      <a href="blog.html">Blog</a>
+      <a href="contact.html">Contact</a>
+    </div>
+
+    <div class="footer-col">
+      <h4>Services</h4>
+      <a href="404.html">Residential portfolios</a>
+      <a href="404.html">Commercial acquisitions</a>
+      <a href="404.html">REIT &amp; fund structures</a>
+      <a href="404.html">Land banking</a>
+      <a href="404.html">Advisory &amp; 1031 exchange</a>
+    </div>
+
+    <div class="footer-col footer-col--newsletter">
+      <h4>Market notes, monthly</h4>
+      <p>One email a month — no noise, no drip campaign.</p>
+      <form class="newsletter-form" id="newsletterForm">
+        <input type="email" required placeholder="you@email.com" aria-label="Email address">
+        <button type="submit" aria-label="Subscribe"><i class="fa-solid fa-arrow-right"></i></button>
+      </form>
+      <div class="footer-socials">
+        <a href="404.html" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+        <a href="404.html" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+        <a href="404.html" aria-label="X"><i class="fa-brands fa-x-twitter"></i></a>
+        <a href="404.html" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-bottom section-inner">
+    <p>© <span id="year"></span> Stackly Property Investment. All rights reserved.</p>
+    <div class="footer-legal">
+      <a href="404.html">Privacy policy</a>
+      <a href="404.html">Terms</a>
+      <a href="404.html">Risk disclosures</a>
+    </div>
+  </div>
+</footer>
+
+<button class="back-to-top" id="backToTop" aria-label="Back to top"><i class="fa-solid fa-arrow-up"></i></button>
+
+<!-- Scripts -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+<script src="script.js"></script>
+</body>
+</html>

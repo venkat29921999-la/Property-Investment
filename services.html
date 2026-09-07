@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Services — Stackly Property Investment</title>
+<meta name="description" content="Six ways Stackly puts capital to work in real estate — residential portfolios, commercial acquisitions, fund structures, land banking, asset management and 1031 advisory.">
+
+<!-- Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+<!-- Font Awesome (icons only, per brief) -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+<!-- AOS (scroll reveal) -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ============ CUSTOM CURSOR (desktop) ============ -->
+<div class="cursor-dot" aria-hidden="true"></div>
+<div class="cursor-ring" aria-hidden="true"></div>
+
+<!-- ============ PRELOADER ============ -->
+<div class="preloader" id="preloader" aria-hidden="true">
+  <svg class="preloader-mark" viewBox="0 0 60 60" fill="none">
+    <circle cx="30" cy="30" r="26" stroke="currentColor" stroke-width="1.2"/>
+    <path class="preloader-line" d="M8 30 A22 22 0 0 1 52 30" stroke="currentColor" stroke-width="1.2"/>
+  </svg>
+</div>
+
+<!-- ============ HEADER (identical to index.html) ============ -->
+<header class="site-header" id="siteHeader">
+  <div class="header-inner">
+
+    <a href="index.html" class="brand" aria-label="Stackly — home">
+      <span class="brand-mark-img" role="img" aria-label="Stackly logo"></span>
+    </a>
+
+    <nav class="nav-group nav-main" aria-label="Primary">
+      <a href="index.html" class="nav-link">Home</a>
+      <a href="about.html" class="nav-link">About</a>
+      <a href="services.html" class="nav-link is-active">Services</a>
+      <a href="blog.html" class="nav-link">Blog</a>
+      <a href="contact.html" class="nav-link">Contact</a>
+    </nav>
+
+    <a href="login.html" class="btn-login"><i class="fa-solid fa-user"></i><span>Log in</span></a>
+
+    <button class="hamburger" id="hamburgerBtn" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<!-- ============ MOBILE MENU (identical to index.html) ============ -->
+<div class="mobile-menu" id="mobileMenu">
+  <nav aria-label="Mobile primary">
+    <a href="index.html" class="mobile-link"><span>01</span>Home</a>
+    <a href="about.html" class="mobile-link"><span>02</span>About</a>
+    <a href="services.html" class="mobile-link"><span>03</span>Services</a>
+    <a href="blog.html" class="mobile-link"><span>04</span>Blog</a>
+    <a href="contact.html" class="mobile-link"><span>05</span>Contact</a>
+  </nav>
+  <a href="login.html" class="btn-outline mobile-login"><i class="fa-solid fa-user"></i> Log in</a>
+  <div class="mobile-menu-foot">
+    <div class="mobile-socials">
+      <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+      <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+      <a href="#" aria-label="X"><i class="fa-brands fa-x-twitter"></i></a>
+    </div>
+    <p>+1 (415) 555‑0148</p>
+  </div>
+</div>
+<div class="mobile-menu-backdrop" id="mobileBackdrop"></div>
+
+<main id="services-top">
+
+  <!-- ============ 1. SERVICES HERO — orbiting icon ring + draw-in underline ============ -->
+  <section class="svc-hero" id="svcHero">
+    <div class="section-inner svc-hero-inner">
+
+      <div class="svc-hero-copy">
+        <p class="section-label section-label--light">What we offer</p>
+        <h1 class="svc-hero-title">Six disciplines. <span class="svc-underline">One underwriting standard.</span></h1>
+        <p class="lead-p" style="color:rgba(237,232,223,0.78);">Every service Stackly offers — from a single residential hold to a pooled fund allocation — runs through the same inspection, modelling and reporting discipline. Nothing is outsourced to a third party you'll never meet.</p>
+        <div class="svc-hero-actions">
+          <a href="404.html" class="btn-solid">Explore services <i class="fa-solid fa-arrow-down"></i></a>
+          <a href="404.html" class="btn-ghost"><i class="fa-solid fa-phone"></i> Talk to an advisor</a>
+        </div>
+      </div>
+
+      <div class="svc-hero-visual">
+        <div class="svc-orbit" id="svcOrbit">
+          <div class="svc-orbit-photo">
+            <img src="assets/pv17.webp" alt="Glass office tower representing Stackly's full range of property investment services" loading="eager">
+          </div>
+          <div class="svc-orbit-ring svc-orbit-ring--1" aria-hidden="true">
+            <span class="svc-orbit-icon" style="--i:0"><i class="fa-solid fa-house-chimney-window"></i></span>
+            <span class="svc-orbit-icon" style="--i:1"><i class="fa-solid fa-city"></i></span>
+            <span class="svc-orbit-icon" style="--i:2"><i class="fa-solid fa-chart-line"></i></span>
+          </div>
+          <div class="svc-orbit-ring svc-orbit-ring--2" aria-hidden="true">
+            <span class="svc-orbit-icon" style="--i:0"><i class="fa-solid fa-seedling"></i></span>
+            <span class="svc-orbit-icon" style="--i:1"><i class="fa-solid fa-key"></i></span>
+            <span class="svc-orbit-icon" style="--i:2"><i class="fa-solid fa-handshake"></i></span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ============ 2. CORE SERVICES — expandable accordion rows ============ -->
+  <section class="svc-core" id="svcCore">
+    <div class="section-inner">
+      <div class="svc-core-head">
+        <p class="section-label">Core services</p>
+        <h2 class="section-title">Pick a discipline, see how it runs.</h2>
+        <p class="lead-p">Tap any row to open the full brief — sourcing method, typical hold and who it suits.</p>
+      </div>
+
+      <div class="svc-accordion" id="svcAccordion">
+
+        <div class="svc-acc-item is-open">
+          <button class="svc-acc-trigger" aria-expanded="true">
+            <span class="svc-acc-no">01</span>
+            <i class="fa-solid fa-house-chimney-window svc-acc-icon"></i>
+            <span class="svc-acc-title">Residential portfolios</span>
+            <span class="svc-acc-plus"><i class="fa-solid fa-chevron-down"></i></span>
+          </button>
+          <div class="svc-acc-panel">
+            <div class="svc-acc-panel-inner">
+              <img src="assets/pv5.webp" alt="Multifamily residential building acquired as part of a Stackly portfolio" loading="lazy">
+              <div>
+                <p>Single‑family and small multifamily assets acquired below replacement cost in supply‑constrained neighborhoods, then leased and held for long‑term cash flow.</p>
+                <ul class="svc-acc-meta">
+                  <li><i class="fa-solid fa-clock"></i> Typical hold: 8–15 years</li>
+                  <li><i class="fa-solid fa-user-group"></i> Best for: income‑focused investors</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="svc-acc-item">
+          <button class="svc-acc-trigger" aria-expanded="false">
+            <span class="svc-acc-no">02</span>
+            <i class="fa-solid fa-city svc-acc-icon"></i>
+            <span class="svc-acc-title">Commercial acquisitions</span>
+            <span class="svc-acc-plus"><i class="fa-solid fa-chevron-down"></i></span>
+          </button>
+          <div class="svc-acc-panel">
+            <div class="svc-acc-panel-inner">
+              <img src="assets/pv4.webp" alt="Low-rise commercial building repositioned by Stackly's acquisitions team" loading="lazy">
+              <div>
+                <p>Office, retail and mixed‑use buildings repositioned through lease‑up, renovation or a change of use — underwritten with the same rigor as our residential book.</p>
+                <ul class="svc-acc-meta">
+                  <li><i class="fa-solid fa-clock"></i> Typical hold: 5–10 years</li>
+                  <li><i class="fa-solid fa-user-group"></i> Best for: growth‑oriented allocations</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="svc-acc-item">
+          <button class="svc-acc-trigger" aria-expanded="false">
+            <span class="svc-acc-no">03</span>
+            <i class="fa-solid fa-chart-line svc-acc-icon"></i>
+            <span class="svc-acc-title">REIT &amp; fund structures</span>
+            <span class="svc-acc-plus"><i class="fa-solid fa-chevron-down"></i></span>
+          </button>
+          <div class="svc-acc-panel">
+            <div class="svc-acc-panel-inner">
+              <img src="assets/pv13.webp" alt="Investment committee structuring a pooled fund vehicle" loading="lazy">
+              <div>
+                <p>Pooled vehicles for investors who want diversified exposure across the whole portfolio without managing a single property directly.</p>
+                <ul class="svc-acc-meta">
+                  <li><i class="fa-solid fa-clock"></i> Typical term: 7‑year fund cycle</li>
+                  <li><i class="fa-solid fa-user-group"></i> Best for: diversified, hands‑off exposure</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="svc-acc-item">
+          <button class="svc-acc-trigger" aria-expanded="false">
+            <span class="svc-acc-no">04</span>
+            <i class="fa-solid fa-seedling svc-acc-icon"></i>
+            <span class="svc-acc-title">Land banking</span>
+            <span class="svc-acc-plus"><i class="fa-solid fa-chevron-down"></i></span>
+          </button>
+          <div class="svc-acc-panel">
+            <div class="svc-acc-panel-inner">
+              <img src="assets/pv8.webp" alt="Land position held ahead of rezoning by Stackly" loading="lazy">
+              <div>
+                <p>Strategic land positions held ahead of rezoning, infrastructure or annexation events — patient capital positioned before the market re‑rates the parcel.</p>
+                <ul class="svc-acc-meta">
+                  <li><i class="fa-solid fa-clock"></i> Typical hold: 10+ years</li>
+                  <li><i class="fa-solid fa-user-group"></i> Best for: long‑horizon capital</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="svc-acc-item">
+          <button class="svc-acc-trigger" aria-expanded="false">
+            <span class="svc-acc-no">05</span>
+            <i class="fa-solid fa-key svc-acc-icon"></i>
+            <span class="svc-acc-title">Asset &amp; property management</span>
+            <span class="svc-acc-plus"><i class="fa-solid fa-chevron-down"></i></span>
+          </button>
+          <div class="svc-acc-panel">
+            <div class="svc-acc-panel-inner">
+              <img src="assets/pv9.webp" alt="In-house asset management team reviewing property performance" loading="lazy">
+              <div>
+                <p>In‑house leasing, maintenance and reporting on every asset we hold — no third‑party management fees eating into the yield you were underwritten.</p>
+                <ul class="svc-acc-meta">
+                  <li><i class="fa-solid fa-clock"></i> Runs for the life of the hold</li>
+                  <li><i class="fa-solid fa-user-group"></i> Best for: current owners &amp; LPs</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="svc-acc-item">
+          <button class="svc-acc-trigger" aria-expanded="false">
+            <span class="svc-acc-no">06</span>
+            <i class="fa-solid fa-handshake svc-acc-icon"></i>
+            <span class="svc-acc-title">Advisory &amp; 1031 exchange</span>
+            <span class="svc-acc-plus"><i class="fa-solid fa-chevron-down"></i></span>
+          </button>
+          <div class="svc-acc-panel">
+            <div class="svc-acc-panel-inner">
+              <img src="assets/pv14.webp" alt="Advisors reviewing a 1031 exchange timeline with a client" loading="lazy">
+              <div>
+                <p>Independent guidance on disposition timing, exchange structuring and portfolio rebalancing — for investors managing capital outside our own holdings too.</p>
+                <ul class="svc-acc-meta">
+                  <li><i class="fa-solid fa-clock"></i> Engagement: project‑based</li>
+                  <li><i class="fa-solid fa-user-group"></i> Best for: sellers &amp; exchangers</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 3. HOW WE DELIVER — horizontal scroll-drawn path ============ -->
+  <section class="svc-process" id="svcProcess">
+    <div class="section-inner">
+      <p class="section-label section-label--light">How we deliver</p>
+      <h2 class="section-title section-title--light">Four stages, one continuous line.</h2>
+
+      <div class="svc-path-wrap" id="svcPathWrap">
+        <svg class="svc-path-svg" id="svcPathSvg" viewBox="0 0 1200 160" preserveAspectRatio="none" aria-hidden="true">
+          <path class="svc-path-track" d="M20,120 C 220,120 220,40 420,40 C 620,40 620,130 800,130 C 980,130 980,50 1180,50"/>
+          <path class="svc-path-draw" id="svcPathDraw" d="M20,120 C 220,120 220,40 420,40 C 620,40 620,130 800,130 C 980,130 980,50 1180,50"/>
+        </svg>
+
+        <div class="svc-path-steps">
+          <div class="svc-path-step" data-svc-inview>
+            <span class="svc-path-dot">01</span>
+            <h3>Discovery call</h3>
+            <p>We map your goals, timeline and existing exposure to real assets.</p>
+          </div>
+          <div class="svc-path-step svc-path-step--up" data-svc-inview>
+            <span class="svc-path-dot">02</span>
+            <h3>Underwriting review</h3>
+            <p>Inspection, title and financial modelling on the specific service you've chosen.</p>
+          </div>
+          <div class="svc-path-step" data-svc-inview>
+            <span class="svc-path-dot">03</span>
+            <h3>Structuring &amp; execution</h3>
+            <p>Direct ownership or fund allocation — closed through escrow with independent counsel.</p>
+          </div>
+          <div class="svc-path-step svc-path-step--up" data-svc-inview>
+            <span class="svc-path-dot">04</span>
+            <h3>Ongoing reporting</h3>
+            <p>Quarterly statements and a standing line to the team running your service.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 4. ENGAGEMENT MODELS — tab switch + cursor spotlight cards ============ -->
+  <section class="svc-tiers" id="svcTiers">
+    <div class="section-inner">
+      <p class="section-label">Engagement models</p>
+      <h2 class="section-title">Two ways to put capital to work.</h2>
+      <p class="lead-p">Same underwriting team behind both — the difference is how directly you hold the asset.</p>
+
+      <div class="svc-tab-switch" role="tablist" aria-label="Engagement model">
+        <button class="svc-tab-btn is-active" role="tab" aria-selected="true" data-svc-tab="direct">Direct ownership</button>
+        <button class="svc-tab-btn" role="tab" aria-selected="false" data-svc-tab="fund">Pooled fund allocation</button>
+        <span class="svc-tab-indicator" id="svcTabIndicator" aria-hidden="true"></span>
+      </div>
+
+      <div class="svc-tab-panels">
+
+        <div class="svc-tab-panel is-active" data-svc-panel="direct">
+          <div class="svc-spot-card">
+            <i class="fa-solid fa-file-signature"></i>
+            <h3>Titled in your name</h3>
+            <p>You hold the deed. Stackly sources, underwrites and manages the asset on your behalf.</p>
+          </div>
+          <div class="svc-spot-card">
+            <i class="fa-solid fa-user-tie"></i>
+            <h3>Dedicated asset lead</h3>
+            <p>One point of contact for leasing, maintenance and reporting on your specific holding.</p>
+          </div>
+          <div class="svc-spot-card">
+            <i class="fa-solid fa-sliders"></i>
+            <h3>Full control on exit</h3>
+            <p>You decide when to sell, refinance or 1031 into the next acquisition — no fund term to wait out.</p>
+          </div>
+        </div>
+
+        <div class="svc-tab-panel" data-svc-panel="fund">
+          <div class="svc-spot-card">
+            <i class="fa-solid fa-layer-group"></i>
+            <h3>Diversified from day one</h3>
+            <p>Your allocation spans every asset class in the current book — no single‑property concentration risk.</p>
+          </div>
+          <div class="svc-spot-card">
+            <i class="fa-solid fa-chart-pie"></i>
+            <h3>Lower entry point</h3>
+            <p>Access the same underwriting standard as a direct hold, starting at a fraction of the capital.</p>
+          </div>
+          <div class="svc-spot-card">
+            <i class="fa-solid fa-users"></i>
+            <h3>Quarterly liquidity window</h3>
+            <p>A standing redemption window gives you a defined, published path to exit the fund.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 5. BY THE NUMBERS — odometer digit-roll ticker ============ -->
+  <section class="svc-stats" id="svcStats">
+    <div class="section-inner">
+      <p class="section-label section-label--light">Track record</p>
+      <h2 class="section-title section-title--light">The numbers behind every service.</h2>
+
+      <div class="svc-odo-row" id="svcOdoRow">
+        <div class="svc-odo" data-svc-odo="4.8" data-svc-suffix="B">
+          <div class="svc-odo-digits"></div>
+          <p>Assets under management</p>
+        </div>
+        <div class="svc-odo" data-svc-odo="212" data-svc-suffix="">
+          <div class="svc-odo-digits"></div>
+          <p>Properties across all services</p>
+        </div>
+        <div class="svc-odo" data-svc-odo="12" data-svc-suffix="">
+          <div class="svc-odo-digits"></div>
+          <p>Metro markets covered</p>
+        </div>
+        <div class="svc-odo" data-svc-odo="96" data-svc-suffix="%">
+          <div class="svc-odo-digits"></div>
+          <p>Portfolio occupancy</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 6. FAQ — accordion synced to a crossfading image panel ============ -->
+  <section class="svc-faq" id="svcFaq">
+    <div class="section-inner svc-faq-grid">
+
+      <div class="svc-faq-copy">
+        <p class="section-label">Common questions</p>
+        <h2 class="section-title">Before you pick a service.</h2>
+
+        <div class="svc-faq-list" id="svcFaqList">
+          <div class="svc-faq-item is-open" data-svc-img="asset/pv32.webp">
+            <button class="svc-faq-q" aria-expanded="true">
+              <span>What's the minimum allocation to start?</span>
+              <span class="svc-faq-icon"><i class="fa-solid fa-plus"></i></span>
+            </button>
+            <div class="svc-faq-a"><p>Direct holdings typically start at $150,000. Pooled fund allocations open at $50,000, with quarterly close dates.</p></div>
+          </div>
+
+          <div class="svc-faq-item" data-svc-img="assets/pv15.webp">
+            <button class="svc-faq-q" aria-expanded="false">
+              <span>How does Stackly source properties?</span>
+              <span class="svc-faq-icon"><i class="fa-solid fa-plus"></i></span>
+            </button>
+            <div class="svc-faq-a"><p>Off‑market relationships built over seventeen years, supplemented by our own acquisitions team walking and modelling every candidate before it's offered.</p></div>
+          </div>
+
+          <div class="svc-faq-item" data-svc-img="assets/pv27.webp">
+            <button class="svc-faq-q" aria-expanded="false">
+              <span>How long does a typical acquisition take?</span>
+              <span class="svc-faq-icon"><i class="fa-solid fa-plus"></i></span>
+            </button>
+            <div class="svc-faq-a"><p>Roughly six weeks from consultation to closing for a direct hold. Fund allocations settle on the next quarterly close date.</p></div>
+          </div>
+
+          <div class="svc-faq-item" data-svc-img="assets/pv29.webp">
+            <button class="svc-faq-q" aria-expanded="false">
+              <span>What fees should I expect?</span>
+              <span class="svc-faq-icon"><i class="fa-solid fa-plus"></i></span>
+            </button>
+            <div class="svc-faq-a"><p>One acquisition fee, one asset‑management fee — no layered structuring charges regardless of which service you choose.</p></div>
+          </div>
+
+          <div class="svc-faq-item" data-svc-img="assets/pv31.webp">
+            <button class="svc-faq-q" aria-expanded="false">
+              <span>Can I exit before the fund term ends?</span>
+              <span class="svc-faq-icon"><i class="fa-solid fa-plus"></i></span>
+            </button>
+            <div class="svc-faq-a"><p>Pooled allocations carry a published quarterly redemption window. Direct holdings can be sold or exchanged whenever you choose.</p></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="svc-faq-visual">
+        <div class="svc-faq-img-stack" id="svcFaqImgStack">
+          <img class="svc-faq-img is-active" src="assets/pv32.webp" alt="Stackly team discussing an investor question">
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ============ 7. CTA — magnetic button + parallax dot field ============ -->
+  <section class="svc-cta" id="svcCta">
+    <div class="svc-cta-dots" id="svcCtaDots" aria-hidden="true"></div>
+    <div class="section-inner svc-cta-inner">
+      <h2 class="svc-cta-title">Ready to put a service to work?</h2>
+      <p>Tell us which discipline fits your goals and we'll walk you through the active offering in one call.</p>
+      <a href="404.html" class="btn-solid btn-solid--light svc-magnet-btn" id="svcMagnetBtn">
+        <span>Start the conversation</span><i class="fa-solid fa-arrow-right-long"></i>
+      </a>
+    </div>
+  </section>
+
+</main>
+
+<!-- ============ FOOTER (identical to index.html) ============ -->
+<footer class="site-footer">
+  <div class="section-inner footer-grid">
+    <div class="footer-brand">
+      <a href="index.html" class="brand brand--footer">
+        <span class="brand-mark-img brand-mark-img--footer" role="img" aria-label="Stackly logo"></span>
+      </a>
+      <p>Real assets, precisely placed. Registered investment adviser, member of the National Real Estate Investment Association.</p>
+    </div>
+
+    <div class="footer-col">
+      <h4>Navigate</h4>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="services.html">Services</a>
+      <a href="index.html#portfolio">Portfolio</a>
+      <a href="index.html#blog">Blog</a>
+      <a href="index.html#contact">Contact</a>
+    </div>
+
+    <div class="footer-col">
+      <h4>Services</h4>
+      <a href="services.html#svcCore">Residential portfolios</a>
+      <a href="services.html#svcCore">Commercial acquisitions</a>
+      <a href="services.html#svcCore">REIT &amp; fund structures</a>
+      <a href="services.html#svcCore">Land banking</a>
+      <a href="services.html#svcCore">Advisory &amp; 1031 exchange</a>
+    </div>
+
+    <div class="footer-col footer-col--newsletter">
+      <h4>Market notes, monthly</h4>
+      <p>One email a month — no noise, no drip campaign.</p>
+      <form class="newsletter-form" id="newsletterForm">
+        <input type="email" required placeholder="you@email.com" aria-label="Email address">
+        <button type="submit" aria-label="Subscribe"><i class="fa-solid fa-arrow-right"></i></button>
+      </form>
+      <div class="footer-socials">
+        <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+        <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+        <a href="#" aria-label="X"><i class="fa-brands fa-x-twitter"></i></a>
+        <a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-bottom section-inner">
+    <p>© <span id="year"></span> Stackly Property Investment. All rights reserved.</p>
+    <div class="footer-legal">
+      <a href="#">Privacy policy</a>
+      <a href="#">Terms</a>
+      <a href="#">Risk disclosures</a>
+    </div>
+  </div>
+</footer>
+
+<button class="back-to-top" id="backToTop" aria-label="Back to top"><i class="fa-solid fa-arrow-up"></i></button>
+
+<!-- Scripts -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
