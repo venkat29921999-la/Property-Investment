@@ -233,7 +233,7 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
   transition:background-color .3s ease;
 }
 .brand:hover .brand-mark-img{ background-color:var(--brass); }
-.brand-mark-img--footer{ width:150px; height:38px; }
+.brand-mark-img--footer{ width:150px; height:33px; }
 
 .hamburger{
   display:none; position:relative;
