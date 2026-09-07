@@ -1288,8 +1288,8 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
 }
 .bl-filter-btn.is-active{ color:var(--ivory); }
 .bl-filter-indicator{
-  position:absolute; top:6px; left:6px; height:calc(100% - 12px); background:var(--ink);
-  transition:transform .4s var(--ease), width .4s var(--ease); z-index:0;
+  position:absolute; top:6px; left:6px; background:var(--ink);
+  transition:transform .4s var(--ease), width .4s var(--ease), height .4s var(--ease); z-index:0;
 }
 
 .bl-grid{ display:grid; grid-template-columns:repeat(3,1fr); gap:28px; }

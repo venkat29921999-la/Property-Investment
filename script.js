@@ -656,9 +656,10 @@ document.addEventListener('DOMContentLoaded', () => {
     const blCards = blGrid.querySelectorAll('.bl-card');
 
     const moveIndicator = (btn) => {
-      blFilterIndicator.style.width = btn.offsetWidth + 'px';
-      blFilterIndicator.style.transform = `translateX(${btn.offsetLeft - 6}px)`;
-    };
+  blFilterIndicator.style.width = btn.offsetWidth + 'px';
+  blFilterIndicator.style.height = btn.offsetHeight + 'px';
+  blFilterIndicator.style.transform = `translate(${btn.offsetLeft - 6}px, ${btn.offsetTop - 6}px)`;
+};
 
     const applyFilter = (filter) => {
       let visibleCount = 0;
