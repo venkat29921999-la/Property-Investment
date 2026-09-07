@@ -1044,9 +1044,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
       // Google works out the visitor's own location once they open this —
       // no browser geolocation permission needed on our side.
-      if (directionsBtn) {
-        directionsBtn.href = 'https://www.google.com/maps/dir/?api=1&destination=' + encodeURIComponent(data.mapQuery);
-      }
+      // (href intentionally left as the static 404.html placeholder, like
+      // the site's other CTAs — not overwritten with a live Maps link.)
 
       loadMap(data);
     };
@@ -1067,9 +1066,6 @@ document.addEventListener('DOMContentLoaded', () => {
     // src — that could silently no-op the load event in some browsers).
     const initialKey = ctOfficeTabs.querySelector('.ct-office-tab.is-active')?.dataset.office || 'bengaluru';
     loadMap(offices[initialKey], { isInitial: true });
-    if (directionsBtn && offices[initialKey]) {
-      directionsBtn.href = 'https://www.google.com/maps/dir/?api=1&destination=' + encodeURIComponent(offices[initialKey].mapQuery);
-    }
   }
 
   /* ---------- Testimonial: scroll-driven word highlight ---------- */
@@ -1881,13 +1877,23 @@ document.addEventListener('DOMContentLoaded', () => {
   const nfBackBtn = document.getElementById('nfBackBtn');
   if (nfBackBtn) {
     nfBackBtn.addEventListener('click', () => {
-      // If there's real browser history to go back to, use it;
-      // otherwise fall back to the homepage so the button never dead-ends.
+      // Prefer real browser history when this tab has it.
       if (window.history.length > 1) {
         window.history.back();
-      } else {
-        window.location.href = 'index.html';
+        return;
       }
+      // No history in this tab (e.g. 404.html was opened in a new tab) —
+      // fall back to the same-origin page that linked here, if we know it.
+      if (document.referrer) {
+        try {
+          if (new URL(document.referrer).origin === window.location.origin) {
+            window.location.href = document.referrer;
+            return;
+          }
+        } catch (err) { /* malformed referrer — ignore and fall through */ }
+      }
+      // Last resort: the homepage, so the button never dead-ends.
+      window.location.href = 'index.html';
     });
   }
 });
