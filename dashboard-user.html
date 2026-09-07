@@ -28,7 +28,9 @@
 
   <aside class="dsh-sidebar" id="dshSidebar">
     <div class="dsh-sidebar-brand">
+      <a href="dashboard-user.html" class="brand" aria-label="Stackly — home">
       <span class="brand-mark-img" role="img" aria-label="Stackly logo"></span>
+    </a>
     </div>
     <nav class="dsh-nav">
       <a href="#overview" class="dsh-nav-link is-active" data-view="overview"><i class="fa-solid fa-table-cells-large"></i> Overview</a>
@@ -54,11 +56,19 @@
         <input type="text" placeholder="Search investments, documents…">
       </div>
       <div class="dsh-topbar-right">
-        <a href="#messages" class="dsh-bell" data-goto-view="messages" aria-label="Messages"><i class="fa-regular fa-bell"></i><span class="dsh-bell-dot"></span></a>
-        <div class="dsh-profile">
-          <span class="dsh-avatar" id="dshAvatar">U</span>
-          <span class="dsh-profile-text"><strong id="dshProfileName">Investor</strong><span>User</span></span>
-        </div>
+<a href="404.html"
+   class="dsh-bell"
+   aria-label="Messages">
+    <i class="fa-regular fa-bell"></i>
+    <span class="dsh-bell-dot"></span>
+</a>
+        <a href="404.html" class="dsh-profile">
+    <span class="dsh-avatar" id="dshAvatar">U</span>
+    <span class="dsh-profile-text">
+        <strong id="dshProfileName">Investor</strong>
+        <span>User</span>
+    </span>
+</a>
       </div>
     </header>
 
@@ -70,6 +80,24 @@
         <h1 id="dshGreeting">Good morning, there 👋</h1>
         <p>Here's how your portfolio is doing.</p>
       </div>
+
+      <div class="dsh-quick-actions">
+  <a href="404.html" class="dsh-quick-action">
+    <i class="fa-solid fa-chart-pie"></i> View investments
+  </a>
+
+  <a href="404.html" class="dsh-quick-action">
+    <i class="fa-solid fa-file-lines"></i> Download tax pack
+  </a>
+
+  <a href="404.html" class="dsh-quick-action">
+    <i class="fa-solid fa-envelope"></i> Message your advisor
+  </a>
+
+  <a href="404.html" class="dsh-quick-action">
+    <i class="fa-solid fa-gear"></i> Update settings
+  </a>
+</div>
 
       <div class="dsh-stat-grid">
         <div class="dsh-stat-card" style="animation-delay:0s">
@@ -106,6 +134,18 @@
         </div>
       </div>
 
+      <div class="dsh-panel">
+        <div class="dsh-panel-head"><h2>Portfolio value, last 6 months</h2></div>
+        <div class="dsh-chart" id="dshUserChart" aria-hidden="true">
+          <div class="dsh-chart-bar" style="--h:58%" data-val="$102K"><span>Oct</span></div>
+          <div class="dsh-chart-bar" style="--h:64%" data-val="$109K"><span>Nov</span></div>
+          <div class="dsh-chart-bar" style="--h:61%" data-val="$106K"><span>Dec</span></div>
+          <div class="dsh-chart-bar" style="--h:76%" data-val="$117K"><span>Jan</span></div>
+          <div class="dsh-chart-bar" style="--h:88%" data-val="$123K"><span>Feb</span></div>
+          <div class="dsh-chart-bar" style="--h:100%" data-val="$128K"><span>Mar</span></div>
+        </div>
+      </div>
+
       <div class="dsh-grid-2">
         <div class="dsh-panel">
           <div class="dsh-panel-head">
@@ -116,7 +156,9 @@
             </div>
           </div>
           <div class="dsh-mail-list" id="dshMailList"><!-- rendered dynamically by script.js --></div>
-          <button class="dsh-view-all" data-goto-view="messages">View all messages <i class="fa-solid fa-arrow-right"></i></button>
+<a href="404.html" class="dsh-view-all">
+  View all messages <i class="fa-solid fa-arrow-right"></i>
+</a>
         </div>
 
         <div class="dsh-panel">
@@ -134,8 +176,9 @@
       <div class="dsh-panel" style="margin-bottom:0;">
         <div class="dsh-panel-head">
           <h2>My investments</h2>
-          <button class="dsh-view-all" data-goto-view="investments">View all investments <i class="fa-solid fa-arrow-right"></i></button>
-        </div>
+<a href="404.html" class="dsh-view-all">
+  View all investments <i class="fa-solid fa-arrow-right"></i>
+</a>        </div>
         <div style="padding:22px;">
           <div class="dsh-invest-grid">
             <div class="dsh-invest-card">
@@ -203,6 +246,21 @@
             </table>
           </div>
         </div>
+
+        <div class="dsh-panel" style="margin-top:24px;">
+          <div class="dsh-panel-head"><h2>Upcoming payouts</h2></div>
+          <div class="dsh-table-wrap">
+            <table class="dsh-table">
+              <thead><tr><th>Expected date</th><th>Source</th><th>Estimated amount</th><th>Status</th></tr></thead>
+              <tbody>
+                <tr><td>Mar 15</td><td>Cedar Row Apartments</td><td>$2,140</td><td><span class="dsh-status is-pending">Scheduled</span></td></tr>
+                <tr><td>Mar 31</td><td>Sunbelt Industrial Fund II</td><td>$680</td><td><span class="dsh-status is-pending">Scheduled</span></td></tr>
+                <tr><td>Apr 4</td><td>301 Congress Land Parcel</td><td>$240</td><td><span class="dsh-status is-pending">Scheduled</span></td></tr>
+                <tr><td>Apr 15</td><td>Cedar Row Apartments</td><td>$2,140</td><td><span class="dsh-status is-pending">Scheduled</span></td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
       </section>
 
       <!-- ============ MESSAGES — full two-pane inbox ============ -->
@@ -236,6 +294,13 @@
           <p>Tax forms, statements and agreements — all in one place.</p>
         </div>
 
+        <div class="dsh-mini-stats" id="dshDocStats">
+          <div class="dsh-mini-stat"><strong id="dshDocStatAll">0</strong><span>Total documents</span></div>
+          <div class="dsh-mini-stat"><strong id="dshDocStatTax">0</strong><span>Tax forms</span></div>
+          <div class="dsh-mini-stat"><strong id="dshDocStatReport">0</strong><span>Reports</span></div>
+          <div class="dsh-mini-stat"><strong id="dshDocStatLegal">0</strong><span>Legal</span></div>
+        </div>
+
         <div class="dsh-pill-filters" id="dshDocFilters">
           <button class="dsh-pill is-active" data-doc-filter="all">All</button>
           <button class="dsh-pill" data-doc-filter="tax">Tax</button>
@@ -267,6 +332,16 @@
 
           <div class="dsh-settings-side">
             <div class="dsh-panel dsh-settings-panel">
+              <div class="dsh-panel-head"><h2>Account overview</h2></div>
+              <div class="dsh-panel-body">
+                <div class="dsh-account-row"><span>Member since</span><strong>June 2022</strong></div>
+                <div class="dsh-account-row"><span>Account ID</span><strong>STK-40218</strong></div>
+                <div class="dsh-account-row"><span>Investor tier</span><strong>Growth</strong></div>
+                <div class="dsh-account-row"><span>Primary branch</span><strong>Coimbatore</strong></div>
+              </div>
+            </div>
+
+            <div class="dsh-panel dsh-settings-panel">
               <div class="dsh-panel-head"><h2>Notifications</h2></div>
               <div class="dsh-panel-body dsh-toggle-list">
                 <label class="dsh-toggle"><input type="checkbox" checked><span class="dsh-toggle-track"></span> Payout confirmations</label>
@@ -286,8 +361,9 @@
           </div>
 
           <div class="dsh-settings-save">
-            <button type="submit" class="dsh-save-btn">Save changes</button>
-            <span class="dsh-saved-note" id="dshSettingsSaved"><i class="fa-solid fa-check"></i> Saved</span>
+<a href="404.html" class="dsh-save-btn">
+  Save changes
+</a>            <span class="dsh-saved-note" id="dshSettingsSaved"><i class="fa-solid fa-check"></i> Saved</span>
           </div>
         </form>
       </section>

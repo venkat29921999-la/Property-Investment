@@ -28,8 +28,9 @@
 
   <aside class="dsh-sidebar" id="dshSidebar">
     <div class="dsh-sidebar-brand">
+<a href="dashboard-admin.html" class="brand" aria-label="Stackly — home">
       <span class="brand-mark-img" role="img" aria-label="Stackly logo"></span>
-    </div>
+    </a>    </div>
     <nav class="dsh-nav">
       <a href="#overview" class="dsh-nav-link is-active" data-view="overview"><i class="fa-solid fa-table-cells-large"></i> Overview</a>
       <a href="#users" class="dsh-nav-link" data-view="users"><i class="fa-solid fa-users"></i> Users</a>
@@ -55,11 +56,19 @@
         <input type="text" placeholder="Search users, listings, messages…">
       </div>
       <div class="dsh-topbar-right">
-        <a href="#messages" class="dsh-bell" data-goto-view="messages" aria-label="Messages"><i class="fa-regular fa-bell"></i><span class="dsh-bell-dot"></span></a>
-        <div class="dsh-profile">
-          <span class="dsh-avatar" id="dshAvatar">A</span>
-          <span class="dsh-profile-text"><strong id="dshProfileName">Admin</strong><span>Admin</span></span>
-        </div>
+<a href="404.html"
+   class="dsh-bell"
+   aria-label="Messages">
+    <i class="fa-regular fa-bell"></i>
+    <span class="dsh-bell-dot"></span>
+</a>
+        <a href="404.html" class="dsh-profile">
+    <span class="dsh-avatar" id="dshAvatar">A</span>
+    <span class="dsh-profile-text">
+        <strong id="dshProfileName">Admin</strong>
+        <span>Admin</span>
+    </span>
+</a>
       </div>
     </header>
 
@@ -71,6 +80,24 @@
         <h1 id="dshGreeting">Good morning, there 👋</h1>
         <p>Here's what's happening across Stackly today.</p>
       </div>
+
+      <div class="dsh-quick-actions">
+  <a href="404.html" class="dsh-quick-action">
+    <i class="fa-solid fa-user-check"></i> Review pending users
+  </a>
+
+  <a href="404.html" class="dsh-quick-action">
+    <i class="fa-solid fa-building"></i> Manage listings
+  </a>
+
+  <a href="404.html" class="dsh-quick-action">
+    <i class="fa-solid fa-file-lines"></i> Generate a report
+  </a>
+
+  <a href="404.html" class="dsh-quick-action">
+    <i class="fa-solid fa-envelope"></i> Check messages
+  </a>
+</div>
 
       <div class="dsh-stat-grid">
         <div class="dsh-stat-card" style="animation-delay:0s">
@@ -107,6 +134,16 @@
         </div>
       </div>
 
+      <div class="dsh-panel">
+        <div class="dsh-panel-head"><h2>Platform health</h2></div>
+        <div class="dsh-health-grid">
+          <div class="dsh-health-item"><span class="dsh-health-dot is-good"></span><div><strong>All systems operational</strong><span>99.98% uptime, last 30 days</span></div></div>
+          <div class="dsh-health-item"><span class="dsh-health-dot is-good"></span><div><strong>412 active sessions</strong><span>Peak today: 618 at 11:40 AM</span></div></div>
+          <div class="dsh-health-item"><span class="dsh-health-dot is-warn"></span><div><strong>14 approvals waiting</strong><span>Oldest pending 2 days</span></div></div>
+          <div class="dsh-health-item"><span class="dsh-health-dot is-good"></span><div><strong>Backups current</strong><span>Last snapshot 40 min ago</span></div></div>
+        </div>
+      </div>
+
       <div class="dsh-grid-2">
         <div class="dsh-panel">
           <div class="dsh-panel-head">
@@ -117,8 +154,9 @@
             </div>
           </div>
           <div class="dsh-mail-list" id="dshMailList"><!-- rendered dynamically by script.js --></div>
-          <button class="dsh-view-all" data-goto-view="messages">View all messages <i class="fa-solid fa-arrow-right"></i></button>
-        </div>
+<a href="404.html" class="dsh-view-all">
+  View all messages <i class="fa-solid fa-arrow-right"></i>
+</a>        </div>
 
         <div class="dsh-panel">
           <div class="dsh-panel-head"><h2>Recent activity</h2></div>
@@ -135,8 +173,9 @@
       <div class="dsh-panel">
         <div class="dsh-panel-head">
           <h2>Recent signups</h2>
-          <button class="dsh-view-all" data-goto-view="users">Manage all users <i class="fa-solid fa-arrow-right"></i></button>
-        </div>
+<a href="404.html" class="dsh-view-all">
+  Manage all users <i class="fa-solid fa-arrow-right"></i>
+</a>        </div>
         <div class="dsh-table-wrap">
           <table class="dsh-table">
             <thead>
@@ -175,7 +214,9 @@
             <button class="dsh-pill" data-role-filter="user">Users</button>
             <button class="dsh-pill" data-role-filter="admin">Admins</button>
           </div>
-        </div>
+<a href="404.html" class="dsh-ghost-btn" id="dshExportUsersBtn">
+  <i class="fa-solid fa-arrow-up-from-bracket"></i> Export CSV
+</a>        </div>
 
         <div class="dsh-panel">
           <div class="dsh-table-wrap">
@@ -210,6 +251,21 @@
         </div>
 
         <div class="dsh-listing-grid" id="dshListingGrid"><!-- rendered dynamically by script.js --></div>
+
+        <div class="dsh-panel" style="margin-top:24px;">
+          <div class="dsh-panel-head"><h2>Top performing listings</h2></div>
+          <div class="dsh-table-wrap">
+            <table class="dsh-table">
+              <thead><tr><th>Listing</th><th>Occupancy</th><th>Monthly revenue</th><th>Trend</th></tr></thead>
+              <tbody>
+                <tr><td>Cedar Row Apartments</td><td>97%</td><td>$41,200</td><td><span class="dsh-status is-active">Trending up</span></td></tr>
+                <tr><td>555 California Street Office</td><td>94%</td><td>$58,900</td><td><span class="dsh-status is-active">Trending up</span></td></tr>
+                <tr><td>Sunbelt Industrial Fund II</td><td>91%</td><td>$36,400</td><td><span class="dsh-status is-active">Stable</span></td></tr>
+                <tr><td>Coimbatore Retail Center</td><td>82%</td><td>$14,100</td><td><span class="dsh-status is-pending">Watch</span></td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
       </section>
 
       <!-- ============ MESSAGES — full two-pane inbox ============ -->
@@ -243,6 +299,11 @@
           <p>Platform-wide reports, generated monthly and ready to share.</p>
         </div>
 
+        <div class="dsh-toolbar">
+          <p class="dsh-toolbar-note">5 reports generated this quarter, 2 scheduled.</p>
+          <button class="dsh-ghost-btn dsh-ghost-btn--neutral" id="dshScheduleReportBtn"><i class="fa-solid fa-calendar-plus"></i> Schedule a report</button>
+        </div>
+
         <div class="dsh-chart" id="dshReportsChart" aria-hidden="true">
           <div class="dsh-chart-bar" style="--h:52%" data-val="$318K"><span>Oct</span></div>
           <div class="dsh-chart-bar" style="--h:61%" data-val="$362K"><span>Nov</span></div>
@@ -273,6 +334,16 @@
           </div>
 
           <div class="dsh-settings-side">
+            <div class="dsh-panel dsh-settings-panel">
+              <div class="dsh-panel-head"><h2>Team members</h2></div>
+              <div class="dsh-panel-body dsh-team-list">
+                <div class="dsh-team-row"><span class="dsh-mail-avatar">FN</span><div><strong>Fatima Noor</strong><span>Admin · Listings &amp; compliance</span></div></div>
+                <div class="dsh-team-row"><span class="dsh-mail-avatar">EF</span><div><strong>Elena Ford</strong><span>Admin · Managing Principal</span></div></div>
+                <div class="dsh-team-row"><span class="dsh-mail-avatar">DO</span><div><strong>David Osei</strong><span>Admin · Asset management</span></div></div>
+                <button class="dsh-ghost-btn dsh-ghost-btn--neutral" id="dshInviteAdminBtn"><i class="fa-solid fa-user-plus"></i> Invite a team member</button>
+              </div>
+            </div>
+
             <div class="dsh-panel dsh-settings-panel">
               <div class="dsh-panel-head"><h2>Notifications</h2></div>
               <div class="dsh-panel-body dsh-toggle-list">

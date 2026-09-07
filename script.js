@@ -95,6 +95,8 @@ document.addEventListener('DOMContentLoaded', () => {
     mobileBackdrop.addEventListener('click', closeMenu);
     mobileMenu.querySelectorAll('a').forEach(a => a.addEventListener('click', closeMenu));
     window.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeMenu(); });
+        document.getElementById('mobileMenuClose')?.addEventListener('click', closeMenu);
+
   }
 
   /* ---------- Hero: mouse parallax on blueprint + photo ---------- */
@@ -206,24 +208,20 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   /* ---------- Forms (front-end only demo) ---------- */
+  /* contactForm now relies on its `required` fields + native browser
+     validation (novalidate removed) and submits to its `action`
+     (404.html) like the site's other placeholder CTAs — no submit
+     intercept needed, so validation runs first automatically. */
   const contactForm = document.getElementById('contactForm');
-  const formNote = document.getElementById('formNote');
-  if (contactForm) {
-    contactForm.addEventListener('submit', (e) => {
-      e.preventDefault();
-      formNote.textContent = 'Thanks — an allocations lead will reply within one business day.';
-      contactForm.reset();
-    });
-  }
+  /* newsletterForm submits to its `action` (404.html) like the site's
+     other placeholder CTAs. On return to this page (including from the
+     browser's back/forward cache, e.g. clicking "Home" on 404.html),
+     force both forms back to empty instead of showing what was typed. */
   const newsletterForm = document.getElementById('newsletterForm');
-  if (newsletterForm) {
-    newsletterForm.addEventListener('submit', (e) => {
-      e.preventDefault();
-      const input = newsletterForm.querySelector('input');
-      input.value = 'Subscribed ✓';
-      setTimeout(() => { input.value = ''; }, 2200);
-    });
-  }
+  window.addEventListener('pageshow', () => {
+    if (contactForm) contactForm.reset();
+    if (newsletterForm) newsletterForm.reset();
+  });
 
   /* ---------- Footer year ---------- */
   const yearEl = document.getElementById('year');
@@ -815,17 +813,19 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  /* ---------- Digest: paper-plane submit animation ---------- */
+  /* ---------- Digest: paper-plane submit animation, then redirect ---------- */
   const blDigestForm = document.getElementById('blDigestForm');
   const blDigestSuccess = document.getElementById('blDigestSuccess');
   if (blDigestForm && blDigestSuccess) {
     blDigestForm.addEventListener('submit', (e) => {
+      if (!blDigestForm.checkValidity()) return; // let native validation UI show, submit is blocked automatically
+      if (blDigestForm.classList.contains('is-sending')) { e.preventDefault(); return; }
       e.preventDefault();
-      if (blDigestForm.classList.contains('is-sending')) return;
       blDigestForm.classList.add('is-sending');
       setTimeout(() => {
         blDigestForm.classList.add('is-hidden');
         blDigestSuccess.classList.add('is-visible');
+        blDigestForm.submit(); // now actually navigate to action="404.html"
       }, 650);
     });
   }
@@ -942,14 +942,24 @@ document.addEventListener('DOMContentLoaded', () => {
         ctForm.reportValidity();
         return;
       }
+      if (ctSubmit.classList.contains('is-sent')) return;
       ctSubmit.classList.add('is-sent');
       burstConfetti();
       if (ctFormNote) ctFormNote.textContent = "Thanks — we've got it and will reply within two business hours.";
       setTimeout(() => {
-        ctForm.reset();
-        updateProgress();
-        ctSubmit.classList.remove('is-sent');
-      }, 3200);
+        ctForm.submit(); // navigate to action="404.html" after the success animation plays
+      }, 1400);
+    });
+
+    // On return to this page (including from the browser's back/forward
+    // cache, e.g. clicking back from 404.html after a successful send),
+    // force the form back to its empty, pre-submit state instead of
+    // showing stale values or the "sent" checkmark.
+    window.addEventListener('pageshow', () => {
+      ctForm.reset();
+      updateProgress();
+      ctSubmit.classList.remove('is-sent');
+      if (ctFormNote) ctFormNote.textContent = '';
     });
   }
 
@@ -962,7 +972,7 @@ document.addEventListener('DOMContentLoaded', () => {
         tag: 'Headquarters', city: 'Bengaluru - Stackly',
         address: 'Khata No 10, Begur - Koppa Rd, in front of SNN Raj Serenity<br>Suraksha Nagar, Yelenahalli, Begur, Bengaluru, Karnataka 560114',
         phone: '+91 80 555 0123', hours: 'Mon–Sat, 10:00–18:00 IST',
-        img: 'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=760&q=45&fm=webp',
+        img: 'assets/pv8.webp',
         alt: "Stackly's Bengaluru office building",
         mapQuery: 'Khata No 10, Begur - Koppa Rd, in front of SNN Raj Serenity, Suraksha Nagar, Yelenahalli, Begur, Bengaluru, Karnataka 560114'
       },
@@ -970,7 +980,7 @@ document.addEventListener('DOMContentLoaded', () => {
         tag: 'Telangana desk', city: 'Hyderabad - Stackly',
         address: 'SBH Officers Colony, Chanda Naik Nagar<br>Madhapur, Hyderabad, Telangana 500081',
         phone: '+91 40 555 0187', hours: 'Mon–Sat, 10:00–18:00 IST',
-        img: 'https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=760&q=45&fm=webp',
+        img: 'assets/pv9.webp',
         alt: "Stackly's Hyderabad office building",
         mapQuery: 'SBH Officers Colony, Chanda Naik Nagar, Madhapur, Hyderabad, Telangana 500081'
       },
@@ -978,7 +988,7 @@ document.addEventListener('DOMContentLoaded', () => {
         tag: 'Manufacturing & textile desk', city: 'Coimbatore - Stackly',
         address: '79 Aiswarya Complex, Nethaji Road<br>PN Palayam, Coimbatore, Tamil Nadu 641037',
         phone: '+91 422 555 0187', hours: 'Mon–Sat, 10:00–18:00 IST',
-        img: 'https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=760&q=45&fm=webp',
+        img: 'assets/pv7.webp',
         alt: "Stackly's Coimbatore office building",
         mapQuery: '79 Aiswarya Complex, Nethaji Road, PN Palayam, Coimbatore, Tamil Nadu 641037'
       }
@@ -1401,12 +1411,18 @@ document.addEventListener('DOMContentLoaded', () => {
     dshNavLinks.forEach(l => l.classList.toggle('is-active', l.dataset.view === key));
     dshContentEl?.scrollTo({ top: 0, behavior: 'smooth' });
     window.scrollTo({ top: 0, behavior: 'smooth' });
-    if (key === 'reports') {
-      // bars start at height 0 in CSS; grow them each time this view opens
-      requestAnimationFrame(() => {
-        document.querySelectorAll('.dsh-chart-bar').forEach(bar => bar.classList.add('is-grown'));
-      });
-    }
+    growCharts(key);
+  };
+
+  // Bar charts sit at height 0 until grown — re-grow them every time their
+  // view becomes visible (they can't transition while display:none).
+  const growCharts = (viewKey) => {
+    const scope = viewKey ? document.querySelector(`.dsh-view[data-view="${viewKey}"]`) : document;
+    scope?.querySelectorAll('.dsh-chart-bar').forEach(bar => {
+      bar.classList.remove('is-grown');
+      void bar.offsetWidth;
+      bar.classList.add('is-grown');
+    });
   };
 
   dshNavLinks.forEach(link => {
@@ -1415,6 +1431,10 @@ document.addEventListener('DOMContentLoaded', () => {
   document.querySelectorAll('[data-goto-view]').forEach(el => {
     el.addEventListener('click', (e) => { e.preventDefault(); switchView(el.dataset.gotoView); });
   });
+
+  // Grow whichever chart is in the initially-active view (Overview, on load).
+  const initialViewKey = document.querySelector('.dsh-view.is-active')?.dataset.view;
+  requestAnimationFrame(() => growCharts(initialViewKey));
 
   /* ---------- Messages: one shared dataset renders both the Overview
      mini-panel and the full two-pane inbox on the Messages view. ---------- */
@@ -1513,8 +1533,9 @@ document.addEventListener('DOMContentLoaded', () => {
         <div class="dsh-reply-box">
           <textarea placeholder="Write a reply…"></textarea>
           <div class="dsh-reply-row">
-            <button class="dsh-reply-btn" id="dshReplyBtn">Send reply</button>
-            <span class="dsh-reply-sent" id="dshReplySent"><i class="fa-solid fa-check"></i> Reply sent</span>
+<a href="404.html" class="dsh-reply-btn" id="dshReplyBtn">
+  Send reply
+</a>            <span class="dsh-reply-sent" id="dshReplySent"><i class="fa-solid fa-check"></i> Reply sent</span>
           </div>
         </div>
       `;
@@ -1637,6 +1658,16 @@ document.addEventListener('DOMContentLoaded', () => {
     const filters = document.getElementById('dshDocFilters');
     let cat = 'all';
 
+    // Mini-stats reflect the actual dataset, not hardcoded counts.
+    const statAll = document.getElementById('dshDocStatAll');
+    const statTax = document.getElementById('dshDocStatTax');
+    const statReport = document.getElementById('dshDocStatReport');
+    const statLegal = document.getElementById('dshDocStatLegal');
+    if (statAll) statAll.textContent = docs.length;
+    if (statTax) statTax.textContent = docs.filter(d => d.cat === 'tax').length;
+    if (statReport) statReport.textContent = docs.filter(d => d.cat === 'report').length;
+    if (statLegal) statLegal.textContent = docs.filter(d => d.cat === 'legal').length;
+
     const renderDocs = () => {
       docList.innerHTML = '';
       const rows = docs.filter(d => cat === 'all' || d.cat === cat);
@@ -1724,14 +1755,14 @@ document.addEventListener('DOMContentLoaded', () => {
   const listingGrid = document.getElementById('dshListingGrid');
   if (listingGrid) {
     const listings = [
-      { name: 'Cedar Row Apartments', type: 'Multifamily · Austin, TX', status: 'active', price: '$4.8M', img: 'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=420&q=42&fm=webp' },
-      { name: 'Coimbatore Retail Center', type: 'Commercial · Coimbatore', status: 'active', price: '$2.1M', img: 'https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=420&q=42&fm=webp' },
-      { name: '301 Congress Land Parcel', type: 'Land · Austin, TX', status: 'pending', price: '$1.4M', img: 'https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=420&q=42&fm=webp' },
-      { name: '555 California Street Office', type: 'Commercial · San Francisco', status: 'sold', price: '$6.2M', img: 'https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=420&q=42&fm=webp' },
-      { name: 'Sunbelt Industrial Fund II', type: 'Fund · Diversified', status: 'active', price: '$15.0M', img: 'https://images.unsplash.com/photo-1524758631624-e2822e304c36?auto=format&fit=crop&w=420&q=42&fm=webp' },
-      { name: 'Bengaluru Tech Park', type: 'Commercial · Bengaluru', status: 'pending', price: '$3.6M', img: 'https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=420&q=42&fm=webp' },
-      { name: 'Chennai Metro Residences', type: 'Multifamily · Chennai', status: 'active', price: '$2.9M', img: 'https://images.unsplash.com/photo-1568992687947-868a62a9f521?auto=format&fit=crop&w=420&q=42&fm=webp' },
-      { name: 'Hyderabad Business Center', type: 'Commercial · Hyderabad', status: 'sold', price: '$4.1M', img: 'https://images.unsplash.com/photo-1580587771525-78b9dba3b914?auto=format&fit=crop&w=420&q=42&fm=webp' }
+      { name: 'Cedar Row Apartments', type: 'Multifamily · Austin, TX', status: 'active', price: '$4.8M', img: 'assets/pv6.webp' },
+      { name: 'Coimbatore Retail Center', type: 'Commercial · Coimbatore', status: 'active', price: '$2.1M', img: 'assets/pv9.webp' },
+      { name: '301 Congress Land Parcel', type: 'Land · Austin, TX', status: 'pending', price: '$1.4M', img: 'assets/pv32.webp' },
+      { name: '555 California Street Office', type: 'Commercial · San Francisco', status: 'sold', price: '$6.2M', img: 'assets/pv20.webp' },
+      { name: 'Sunbelt Industrial Fund II', type: 'Fund · Diversified', status: 'active', price: '$15.0M', img: 'assets/pv29.webp' },
+      { name: 'Bengaluru Tech Park', type: 'Commercial · Bengaluru', status: 'pending', price: '$3.6M', img: 'assets/pv6.webp' },
+      { name: 'Chennai Metro Residences', type: 'Multifamily · Chennai', status: 'active', price: '$2.9M', img: 'assets/pv13.webp' },
+      { name: 'Hyderabad Business Center', type: 'Commercial · Hyderabad', status: 'sold', price: '$4.1M', img: 'assets/pv4.webp' }
     ];
     const filters = document.getElementById('dshListingFilters');
     let status = 'all';
@@ -1825,6 +1856,19 @@ document.addEventListener('DOMContentLoaded', () => {
       window.location.href = 'login.html';
     });
   }
+
+  /* ---------- Small decorative "action" buttons: brief inline confirmation,
+     no real backend behind them (front-end only demo) ---------- */
+  const flashButton = (btn, doneText, doneIcon) => {
+    if (!btn || btn.classList.contains('is-done')) return;
+    const original = btn.innerHTML;
+    btn.classList.add('is-done');
+    btn.innerHTML = `<i class="fa-solid ${doneIcon}"></i> ${doneText}`;
+    setTimeout(() => { btn.classList.remove('is-done'); btn.innerHTML = original; }, 2200);
+  };
+  document.getElementById('dshExportUsersBtn')?.addEventListener('click', function () { flashButton(this, 'Exported', 'fa-check'); });
+  document.getElementById('dshScheduleReportBtn')?.addEventListener('click', function () { flashButton(this, 'Scheduled', 'fa-check'); });
+  document.getElementById('dshInviteAdminBtn')?.addEventListener('click', function () { flashButton(this, 'Invite sent', 'fa-check'); });
 
 });
 

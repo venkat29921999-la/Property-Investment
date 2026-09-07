@@ -59,6 +59,9 @@
 
 <!-- ============ MOBILE MENU (identical to index.html) ============ -->
 <div class="mobile-menu" id="mobileMenu">
+  <button class="mobile-menu-close" id="mobileMenuClose" aria-label="Close menu">
+    <i class="fa-solid fa-xmark"></i>
+  </button>
   <nav aria-label="Mobile primary">
     <a href="index.html" class="mobile-link"><span>01</span>Home</a>
     <a href="about.html" class="mobile-link"><span>02</span>About</a>
@@ -67,14 +70,7 @@
     <a href="contact.html" class="mobile-link"><span>05</span>Contact</a>
   </nav>
   <a href="login.html" class="btn-outline mobile-login"><i class="fa-solid fa-user"></i> Log in</a>
-  <div class="mobile-menu-foot">
-    <div class="mobile-socials">
-      <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
-      <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
-      <a href="#" aria-label="X"><i class="fa-brands fa-x-twitter"></i></a>
-    </div>
-    <p>+1 (415) 555‑0148</p>
-  </div>
+  
 </div>
 <div class="mobile-menu-backdrop" id="mobileBackdrop"></div>
 
@@ -157,7 +153,7 @@
           <span class="ct-progress-seg" data-seg="2"></span>
         </div>
 
-        <form class="ct-form" id="ctForm" novalidate>
+        <form class="ct-form" id="ctForm" novalidate action="404.html">
           <div class="ct-field">
             <input id="ctName" name="name" type="text" required placeholder=" ">
             <label for="ctName">Full name</label>
@@ -347,33 +343,32 @@
       <h4>Navigate</h4>
       <a href="index.html">Home</a>
       <a href="about.html">About</a>
-      <a href="index.html#services">Services</a>
-      <a href="index.html#portfolio">Portfolio</a>
+      <a href="services.html">Services</a>
       <a href="blog.html">Blog</a>
       <a href="contact.html">Contact</a>
     </div>
 
     <div class="footer-col">
       <h4>Services</h4>
-      <a href="index.html#services">Residential portfolios</a>
-      <a href="index.html#services">Commercial acquisitions</a>
-      <a href="index.html#services">REIT &amp; fund structures</a>
-      <a href="index.html#services">Land banking</a>
-      <a href="index.html#services">Advisory &amp; 1031 exchange</a>
+      <a href="404.html">Residential portfolios</a>
+      <a href="404.html">Commercial acquisitions</a>
+      <a href="404.html">REIT &amp; fund structures</a>
+      <a href="404.html">Land banking</a>
+      <a href="404.html">Advisory &amp; 1031 exchange</a>
     </div>
 
     <div class="footer-col footer-col--newsletter">
       <h4>Market notes, monthly</h4>
       <p>One email a month — no noise, no drip campaign.</p>
-      <form class="newsletter-form" id="newsletterForm">
-        <input type="email" required placeholder="you@email.com" aria-label="Email address">
+      <form class="newsletter-form" id="newsletterForm" action="404.html">
+        <input type="email" required placeholder="you@email.com" aria-label="Email address" autocomplete="off">
         <button type="submit" aria-label="Subscribe"><i class="fa-solid fa-arrow-right"></i></button>
       </form>
       <div class="footer-socials">
-        <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
-        <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
-        <a href="#" aria-label="X"><i class="fa-brands fa-x-twitter"></i></a>
-        <a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+        <a href="404.html" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+        <a href="404.html" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+        <a href="404.html" aria-label="X"><i class="fa-brands fa-x-twitter"></i></a>
+        <a href="404.html" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
       </div>
     </div>
   </div>
@@ -381,9 +376,9 @@
   <div class="footer-bottom section-inner">
     <p>© <span id="year"></span> Stackly Property Investment. All rights reserved.</p>
     <div class="footer-legal">
-      <a href="#">Privacy policy</a>
-      <a href="#">Terms</a>
-      <a href="#">Risk disclosures</a>
+      <a href="404.html">Privacy policy</a>
+      <a href="404.html">Terms</a>
+      <a href="404.html">Risk disclosures</a>
     </div>
   </div>
 </footer>

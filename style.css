@@ -26,7 +26,7 @@
 }
 
 *,*::before,*::after{ box-sizing:border-box; }
-html{ scroll-behavior:smooth; }
+html{ scroll-behavior:smooth; overflow-x:hidden; width:100%; }
 @media (prefers-reduced-motion: reduce){
   html{ scroll-behavior:auto; }
   *,*::before,*::after{ animation-duration:0.001ms !important; animation-iteration-count:1 !important; transition-duration:0.001ms !important; scroll-behavior:auto !important; }
@@ -41,6 +41,8 @@ body{
   line-height:1.6;
   -webkit-font-smoothing:antialiased;
   overflow-x:hidden;
+  width:100%;
+  max-width:100%;
 }
 
 img{ max-width:100%; display:block; }
@@ -2353,6 +2355,45 @@ table.dsh-table{ width:100%; border-collapse:collapse; min-width:560px; }
   transition:background .25s var(--ease), color .25s var(--ease), border-color .25s var(--ease);
 }
 .dsh-ghost-btn:hover{ background:#b3554a; color:#fff; border-color:#b3554a; }
+.dsh-ghost-btn--neutral:hover{ background:var(--ink); color:var(--ivory); border-color:var(--ink); }
+.dsh-ghost-btn.is-done{ background:#4f8a5b; color:#fff; border-color:#4f8a5b; }
+
+/* ---------- Quick actions (Overview) ---------- */
+.dsh-quick-actions{ display:flex; flex-wrap:wrap; gap:12px; margin-bottom:24px; }
+.dsh-quick-action{
+  flex:1 1 200px; display:flex; align-items:center; gap:10px; padding:14px 18px; background:#fff;
+  border:1px solid var(--ink-line); color:var(--ink); font-size:0.85rem; font-weight:700; cursor:pointer;
+  transition:background .25s var(--ease), color .25s var(--ease), border-color .25s var(--ease), transform .25s var(--ease);
+}
+.dsh-quick-action i{ color:var(--brass); font-size:0.95rem; transition:color .25s var(--ease); }
+.dsh-quick-action:hover{ background:var(--ink); color:var(--ivory); border-color:var(--ink); transform:translateY(-2px); }
+.dsh-quick-action:hover i{ color:var(--brass); }
+
+/* ---------- Platform health (Admin overview) ---------- */
+.dsh-health-grid{ display:grid; grid-template-columns:repeat(2,1fr); gap:0; }
+.dsh-health-item{ display:flex; align-items:flex-start; gap:12px; padding:18px 22px; border-bottom:1px solid var(--ink-line); border-right:1px solid var(--ink-line); }
+.dsh-health-item:nth-child(2n){ border-right:0; }
+.dsh-health-item:nth-last-child(-n+2){ border-bottom:0; }
+.dsh-health-dot{ width:10px; height:10px; border-radius:50%; margin-top:4px; flex-shrink:0; position:relative; }
+.dsh-health-dot.is-good{ background:#4f8a5b; }
+.dsh-health-dot.is-good::after{ content:''; position:absolute; inset:0; border-radius:50%; background:#4f8a5b; animation:ct-ping 2.6s ease-out infinite; }
+.dsh-health-dot.is-warn{ background:#c98a3a; }
+.dsh-health-item strong{ display:block; font-size:0.88rem; color:var(--ink); }
+.dsh-health-item span{ font-size:0.78rem; color:var(--ivory-dim); }
+
+/* ---------- Account overview rows (Settings) ---------- */
+.dsh-account-row{ display:flex; align-items:center; justify-content:space-between; padding:10px 0; border-bottom:1px solid var(--ink-line); font-size:0.86rem; }
+.dsh-account-row:last-child{ border-bottom:0; }
+.dsh-account-row span{ color:var(--ivory-dim); }
+.dsh-account-row strong{ color:var(--ink); }
+
+/* ---------- Team members (Admin settings) ---------- */
+.dsh-team-list{ gap:14px !important; }
+.dsh-team-row{ display:flex; align-items:center; gap:12px; }
+.dsh-team-row strong{ display:block; font-size:0.88rem; color:var(--ink); }
+.dsh-team-row span{ font-size:0.76rem; color:var(--ivory-dim); }
+
+.dsh-toolbar-note{ font-size:0.85rem; color:var(--ivory-dim); }
 
 .dsh-settings-save{ grid-column:1 / -1; display:flex; align-items:center; gap:16px; }
 .dsh-save-btn{
@@ -2378,6 +2419,11 @@ table.dsh-table{ width:100%; border-collapse:collapse; min-width:560px; }
   .dsh-mail-detail{ padding:20px; }
   .dsh-report-card{ flex-wrap:wrap; }
   .dsh-listing-grid{ grid-template-columns:repeat(auto-fill, minmax(160px,1fr)); }
+  .dsh-quick-action{ flex:1 1 100%; }
+  .dsh-health-grid{ grid-template-columns:1fr; }
+  .dsh-health-item{ border-right:0; }
+  .dsh-health-item:nth-last-child(-n+2){ border-bottom:1px solid var(--ink-line); }
+  .dsh-health-item:last-child{ border-bottom:0; }
 }
 @media (prefers-reduced-motion: reduce){
   .dsh-view.is-active{ animation:none; }
@@ -2511,4 +2557,27 @@ table.dsh-table{ width:100%; border-collapse:collapse; min-width:560px; }
   .nf-figure{ gap:2px; }
   .nf-actions{ flex-direction:column; width:100%; }
   .nf-actions a, .nf-actions button{ width:100%; justify-content:center; }
+}
+
+
+
+/* ---- FIX: mobile header overflow + close button + full-screen menu ---- */
+@media (max-width:900px){
+  .header-inner{ gap:16px; justify-content:space-between; }
+
+  .mobile-menu{ width:100vw; padding-top:90px; }
+}
+
+.mobile-menu-close{
+  position:absolute; top:22px; right:22px; z-index:2;
+  width:40px; height:40px;
+  display:flex; align-items:center; justify-content:center;
+  background:none; border:1px solid var(--ink-line);
+  border-radius:50%; color:var(--ivory); font-size:1.1rem;
+  cursor:pointer;
+  transition:background .3s ease, border-color .3s ease, transform .3s ease, color .3s ease;
+}
+.mobile-menu-close:hover{
+  background:var(--brass); color:var(--ink); border-color:var(--brass);
+  transform:rotate(90deg);
 }
